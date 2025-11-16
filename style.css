@@ -1,4 +1,4 @@
-/* ---------- Base ---------- */
+/* ====== Base ====== */
 *,
 *::before,
 *::after {
@@ -28,7 +28,6 @@ body {
   padding: 0;
 }
 
-/* พื้นหลังไล่สีแบบในรูป */
 body {
   min-height: 100vh;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
@@ -37,7 +36,7 @@ body {
   background: radial-gradient(circle at top left, var(--bg-start), var(--bg-end));
 }
 
-/* ขยับการ์ดให้อยู่กลางจอ มีระยะหายใจ */
+/* layout กลางจอ */
 .page {
   min-height: 100vh;
   display: flex;
@@ -46,7 +45,7 @@ body {
   padding: 40px 16px;
 }
 
-/* ---------- Card ---------- */
+/* ====== Card หลัก ====== */
 .card {
   width: 100%;
   max-width: 1040px;
@@ -59,7 +58,7 @@ body {
   gap: 28px;
 }
 
-/* ---------- Header row ---------- */
+/* header การ์ด */
 .card-header {
   display: flex;
   justify-content: space-between;
@@ -67,7 +66,7 @@ body {
   gap: 16px;
 }
 
-/* Avatar + text */
+/* avatar + ชื่อ */
 .avatar-block {
   display: flex;
   align-items: center;
@@ -93,7 +92,7 @@ body {
   color: var(--text-light);
 }
 
-/* Language pills */
+/* language pills */
 .lang-switch {
   display: flex;
   gap: 8px;
@@ -115,7 +114,7 @@ body {
   border-color: var(--brand);
 }
 
-/* ---------- Body grid ---------- */
+/* ====== body 3 คอลัมน์ ====== */
 .card-body {
   display: grid;
   grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr);
@@ -126,7 +125,7 @@ body {
   min-width: 0;
 }
 
-/* Left column */
+/* hero (ซ้าย) */
 .hero-title {
   margin: 0 0 8px;
   font-size: 26px;
@@ -162,7 +161,7 @@ body {
   color: var(--text-sub);
 }
 
-/* Buttons */
+/* ปุ่ม */
 .btn-row {
   display: flex;
   flex-wrap: wrap;
@@ -204,7 +203,7 @@ body {
   background: var(--brand-soft);
 }
 
-/* Middle & right columns */
+/* section ทั่วไป */
 .section-title {
   margin: 0 0 10px;
   font-size: 15px;
@@ -237,7 +236,7 @@ body {
   text-decoration: underline;
 }
 
-/* Footer inside card */
+/* footer ในการ์ด */
 .card-footer {
   display: flex;
   justify-content: space-between;
@@ -248,7 +247,85 @@ body {
   margin-top: 4px;
 }
 
-/* ---------- Responsive ---------- */
+/* ====== Video grid (Khutbah pages) ====== */
+.sections-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.section-block h2 {
+  margin: 0 0 6px;
+  font-size: 20px;
+}
+
+.section-block p {
+  margin: 0 0 12px;
+  color: var(--text-sub);
+  font-size: 14px;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.video-card {
+  background: #f9fafb;
+  border-radius: 16px;
+  padding: 10px;
+  border: 1px solid #e5e7eb;
+}
+
+.video-card-title {
+  font-size: 13px;
+  margin: 0 0 6px;
+  color: var(--text-main);
+}
+
+.video-card iframe {
+  width: 100%;
+  height: 155px;
+  border-radius: 10px;
+  border: none;
+}
+
+/* ====== RTL สำหรับอาหรับ ====== */
+body.rtl {
+  direction: rtl;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Arabic",
+    "Geeza Pro", "Segoe UI", sans-serif;
+}
+
+body.rtl .card-body {
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr);
+}
+
+body.rtl .bullet-list {
+  padding-left: 0;
+  padding-right: 18px;
+}
+
+/* header rtl */
+body.rtl .card-header {
+  flex-direction: row-reverse;
+}
+
+body.rtl .avatar-block {
+  flex-direction: row-reverse;
+}
+
+body.rtl .lang-switch {
+  flex-direction: row;
+}
+
+/* footer rtl */
+body.rtl .card-footer {
+  flex-direction: row-reverse;
+}
+
+/* ====== Responsive ====== */
 @media (max-width: 900px) {
   .card-body {
     grid-template-columns: 1fr 1fr;
@@ -270,8 +347,16 @@ body {
     align-items: flex-start;
   }
 
+  body.rtl .card-header {
+    align-items: flex-end;
+  }
+
   .card-footer {
     flex-direction: column;
     gap: 4px;
+  }
+
+  body.rtl .card-footer {
+    align-items: flex-end;
   }
 }
