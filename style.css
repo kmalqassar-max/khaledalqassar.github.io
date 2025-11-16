@@ -1,245 +1,116 @@
-/* ===========================
-   GLOBAL THEME SETTINGS
-=========================== */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Khaled Alqassar | Imam & Mosque Preacher</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page">
+    <main class="card">
+      <!-- Top row: avatar + name + language switch -->
+      <header class="card-header">
+        <div class="avatar-block">
+          <div class="avatar"></div>
+          <div>
+            <div class="name-main">Khaled Alqassar</div>
+            <div class="name-sub">Imam &amp; Mosque Preacher</div>
+          </div>
+        </div>
 
-:root {
-  --bg-gradient: linear-gradient(180deg, #eaf1ff 0%, #e9ebff 50%, #e8e7ff 100%);
-  --card-bg: #ffffff;
-  --text-main: #0f172a;
-  --text-muted: #475569;
-  --brand-blue: #2563eb;
-  --brand-primary: #2563eb;
-  --brand-primary-soft: #eff6ff;
-  --border-soft: #e2e8f0;
-  --shadow-card: 0 25px 55px rgba(15, 23, 42, 0.15);
-  --radius-xl: 26px;
-  --radius-full: 999px;
+        <nav class="lang-switch">
+          <!-- TODO: สร้างหน้าอาหรับแล้วค่อยเปลี่ยนลิงก์เป็น arabic.html -->
+          <a href="index.html" class="lang-pill">العربية</a>
+          <a href="en.html" class="lang-pill active">English</a>
+        </nav>
+      </header>
 
-  --font-main: system-ui, -apple-system, BlinkMacSystemFont,
-    "SF Pro Text", "Segoe UI", sans-serif;
-}
+      <!-- Main content grid -->
+      <section class="card-body">
+        <!-- Left: profile -->
+        <div class="col profile">
+          <h1 class="hero-title">
+            Imam, Mosque Speaker, Islamic Educator
+          </h1>
 
-/* ===========================
-      RESET
-=========================== */
+          <p class="hero-subtitle">
+            Helping communities grow in faith with wisdom and compassion.
+          </p>
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+          <div class="chip-row">
+            <span class="chip">10+ years of experience</span>
+            <span class="chip">Mosque leadership</span>
+            <span class="chip">Community support</span>
+          </div>
 
-body {
-  margin: 0;
-  font-family: var(--font-main);
-  background: var(--bg-gradient);
-  color: var(--text-main);
-  -webkit-font-smoothing: antialiased;
-}
+          <p class="hero-text">
+            With over 10 years of experience in Islamic guidance, mosque
+            leadership, community support, and religious education. Helping
+            individuals and communities grow spiritually with clarity, wisdom,
+            and compassion.
+          </p>
 
-body.rtl {
-  direction: rtl;
-  text-align: right;
-}
+          <div class="btn-row">
+            <!-- แก้ href ได้ตามต้องการ -->
+            <a
+              href="mailto:contact@khaledalqassar.com?subject=Booking%20consultation"
+              class="btn primary"
+            >
+              Book Consultation
+            </a>
+            <a href="khutbah-en.html" class="btn ghost">
+              View Services
+            </a>
+          </div>
+        </div>
 
-a {
-  color: var(--brand-blue);
-  text-decoration: none;
-}
+        <!-- Middle: Areas of expertise -->
+        <div class="col">
+          <h2 class="section-title">Areas of Expertise</h2>
+          <ul class="bullet-list">
+            <li>Mosque Leadership &amp; Management</li>
+            <li>Friday Sermons &amp; Public Speaking</li>
+            <li>Islamic Teaching &amp; Education</li>
+            <li>Community Support &amp; Counseling</li>
+          </ul>
+        </div>
 
-a:hover {
-  text-decoration: underline;
-}
+        <!-- Right: Contact -->
+        <div class="col">
+          <h2 class="section-title">Contact</h2>
+          <p class="section-text">
+            For booking sermons, mosque programs, community sessions or Islamic
+            guidance, feel free to reach out.
+          </p>
 
-/* ===========================
-      PAGE LAYOUT
-=========================== */
+          <p class="section-text">
+            <strong>Email</strong><br />
+            <a href="mailto:contact@khaledalqassar.com">
+              contact@khaledalqassar.com
+            </a>
+          </p>
 
-.page {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  padding: 20px 14px 40px;
-}
+          <p class="section-text">
+            <strong>Instagram</strong><br />
+            <a href="https://instagram.com/khaledalqassar" target="_blank">
+              @khaledalqassar
+            </a>
+          </p>
 
-.main-shell {
-  width: 100%;
-  max-width: 1150px;
-  background: var(--card-bg);
-  border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-card);
-  padding: 32px 32px 40px;
-  margin-top: 220px;
-}
+          <p class="section-text">
+            <strong>YouTube</strong><br />
+            Khaled AlQassar
+          </p>
+        </div>
+      </section>
 
-/* ===========================
-      TOP HEADER
-=========================== */
-
-.header-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 22px;
-}
-
-.name-title {
-  font-size: 20px;
-  font-weight: 700;
-}
-
-.name-subtitle {
-  font-size: 13px;
-  color: var(--text-muted);
-}
-
-.language-switch {
-  display: flex;
-  gap: 8px;
-}
-
-.language-switch a {
-  padding: 6px 14px;
-  border-radius: var(--radius-full);
-  font-size: 13px;
-  background: #f1f5f9;
-  border: 1px solid transparent;
-}
-
-.language-switch a.active {
-  background: var(--brand-primary);
-  color: #fff;
-}
-
-/* ===========================
-      PROFILE SECTION
-=========================== */
-
-.profile-title {
-  font-size: 26px;
-  font-weight: 800;
-  margin-bottom: 8px;
-}
-
-.profile-highlight {
-  color: var(--brand-blue);
-}
-
-.profile-text {
-  font-size: 14px;
-  color: var(--text-muted);
-  max-width: 600px;
-  line-height: 1.7;
-}
-
-.badge-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 14px;
-}
-
-.badge {
-  font-size: 12px;
-  background: var(--brand-primary-soft);
-  padding: 6px 14px;
-  border-radius: var(--radius-full);
-  color: #1e3a8a;
-}
-
-/* ===========================
-      BUTTONS
-=========================== */
-
-.btn-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin: 20px 0;
-}
-
-.btn-primary {
-  background: var(--brand-primary);
-  color: #fff;
-  padding: 10px 22px;
-  border-radius: var(--radius-full);
-  font-weight: 600;
-  font-size: 14px;
-  border: none;
-  cursor: pointer;
-  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.25);
-}
-
-.btn-outline {
-  background: #fff;
-  border: 1px solid var(--border-soft);
-  padding: 9px 20px;
-  border-radius: var(--radius-full);
-  font-size: 14px;
-}
-
-/* ===========================
-      GRID SECTIONS
-=========================== */
-
-.grid-3 {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  margin-top: 24px;
-  gap: 24px;
-}
-
-.grid-card {
-  background: #fff;
-  border-radius: 22px;
-  border: 1px solid var(--border-soft);
-  padding: 20px;
-}
-
-.grid-title {
-  font-size: 16px;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-.grid-text {
-  font-size: 14px;
-  color: var(--text-muted);
-  line-height: 1.6;
-}
-
-/* ===========================
-      CONTACT
-=========================== */
-
-.contact-row {
-  margin-top: 35px;
-  border-top: 1px solid var(--border-soft);
-  padding-top: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  font-size: 14px;
-}
-
-.footer-note {
-  text-align: center;
-  margin-top: 20px;
-  font-size: 12px;
-  color: var(--text-muted);
-}
-
-/* ===========================
-      RESPONSIVE
-=========================== */
-
-@media (max-width: 768px) {
-  .main-shell {
-    margin-top: 140px;
-    padding: 24px;
-  }
-
-  .profile-title {
-    font-size: 22px;
-  }
-}
+      <!-- Footer -->
+      <footer class="card-footer">
+        <span>© 2025 Khaled Alqassar</span>
+        <span>Imam · Mosque Speaker · Islamic Educator</span>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
