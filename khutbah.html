@@ -2,29 +2,110 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Friday Khutbah – Khaled Alqassar</title>
+  <title>Khutbah & Projects – Khaled Alqassar</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    .video-section {
+    /* Layout sections */
+    .section-block {
       margin: 40px 0;
     }
+
+    .section-block h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .section-block p {
+      line-height: 1.6;
+    }
+
+    /* Top anchors */
+    .section-nav {
+      margin: 10px 0 25px;
+      font-size: 14px;
+    }
+
+    .section-nav a {
+      margin-right: 12px;
+      text-decoration: none;
+      border-radius: 999px;
+      padding: 6px 12px;
+      border: 1px solid rgba(0,0,0,0.15);
+      font-size: 13px;
+    }
+
+    /* Video area */
+    .video-section {
+      margin: 20px 0 10px;
+    }
+
     .video-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 20px;
       margin-top: 20px;
     }
+
     .video-box {
       background: #fff;
       border-radius: 16px;
       padding: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
       overflow: hidden;
     }
+
     iframe {
       width: 100%;
       height: 200px;
       border-radius: 12px;
+      border: none;
+    }
+
+    /* Project cards */
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .project-card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 16px 18px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    }
+
+    .project-card h3 {
+      margin-top: 0;
+      margin-bottom: 8px;
+      font-size: 18px;
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: rgba(0,0,0,0.04);
+      margin-bottom: 6px;
+    }
+
+    .project-card ul {
+      padding-left: 18px;
+      margin: 8px 0 0;
+      font-size: 14px;
+    }
+
+    /* Small links */
+    .back-links {
+      margin-top: 10px;
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+
+    .back-links a {
+      margin-right: 10px;
     }
   </style>
 </head>
@@ -32,51 +113,198 @@
 <body class="lang-en">
   <main class="page-shell">
     <section class="card">
-      <h1>Friday Khutbah</h1>
-      <p>Selected khutbahs, teachings, and Islamic reminders.</p>
+      <h1>Khutbah & Community Projects</h1>
+      <p>
+        A hub for Friday khutbahs, community projects, lecture series,
+        and live programs led by Sheikh Khaled Alqassar.
+      </p>
 
-      <a href="index.html">← Back to Arabic Home</a> |
-      <a href="en.html">English Home →</a>
+      <div class="back-links">
+        <a href="index.html">← Back to Arabic Home</a>
+        |
+        <a href="en.html">English Home →</a>
+      </div>
 
-      <!-- START VIDEO SECTION -->
-      <section class="video-section">
-        <h2>Khutbah Videos</h2>
+      <!-- Anchor navigation inside this page -->
+      <div class="section-nav">
+        <a href="#khutbah">Friday Khutbah</a>
+        <a href="#projects">Teaching & Community Projects</a>
+        <a href="#lectures">Lecture Series</a>
+        <a href="#live">Live & Online Sessions</a>
+      </div>
 
-        <div class="video-grid">
+      <!-- 1) FRIDAY KHUTBAH VIDEOS -->
+      <section id="khutbah" class="section-block">
+        <h2>Friday Khutbah Videos</h2>
+        <p>
+          A selection of Friday khutbahs and reminders for the community.
+        </p>
 
-          <div class="video-box">
-            <iframe src="https://www.youtube.com/embed/j9D1tHDd8d0"
-              title="YouTube video"></iframe>
+        <div class="video-section">
+          <div class="video-grid">
+
+            <div class="video-box">
+              <iframe
+                src="https://www.youtube.com/embed/j9D1tHDd8d0"
+                title="Khutbah video 1"
+                allowfullscreen>
+              </iframe>
+            </div>
+
+            <div class="video-box">
+              <iframe
+                src="https://www.youtube.com/embed/iOYkV0k4j-o"
+                title="Khutbah video 2"
+                allowfullscreen>
+              </iframe>
+            </div>
+
+            <div class="video-box">
+              <iframe
+                src="https://www.youtube.com/embed/YtdgS9h1vjQ"
+                title="Khutbah video 3"
+                allowfullscreen>
+              </iframe>
+            </div>
+
+            <div class="video-box">
+              <iframe
+                src="https://www.youtube.com/embed/wNLIZkCmFQg"
+                title="Khutbah video 4"
+                allowfullscreen>
+              </iframe>
+            </div>
+
+            <div class="video-box">
+              <iframe
+                src="https://www.youtube.com/embed/kxOqp6kdblY"
+                title="Khutbah video 5"
+                allowfullscreen>
+              </iframe>
+            </div>
+
+            <div class="video-box">
+              <iframe
+                src="https://www.youtube.com/embed/WejFdDnkJ2w"
+                title="Khutbah video 6"
+                allowfullscreen>
+              </iframe>
+            </div>
+
           </div>
-
-          <div class="video-box">
-            <iframe src="https://www.youtube.com/embed/iOYkV0k4j-o"
-              title="YouTube video"></iframe>
-          </div>
-
-          <div class="video-box">
-            <iframe src="https://www.youtube.com/embed/YtdgS9h1vjQ"
-              title="YouTube video"></iframe>
-          </div>
-
-          <div class="video-box">
-            <iframe src="https://www.youtube.com/embed/wNLIZkCmFQg"
-              title="YouTube video"></iframe>
-          </div>
-
-          <div class="video-box">
-            <iframe src="https://www.youtube.com/embed/kxOqp6kdblY"
-              title="YouTube video"></iframe>
-          </div>
-
-          <div class="video-box">
-            <iframe src="https://www.youtube.com/embed/WejFdDnkJ2w"
-              title="YouTube video"></iframe>
-          </div>
-
         </div>
       </section>
-      <!-- END VIDEO SECTION -->
+
+      <!-- 2) TEACHING & COMMUNITY PROJECTS -->
+      <section id="projects" class="section-block">
+        <h2>Teaching & Community Projects</h2>
+        <p>
+          Ongoing initiatives designed to strengthen faith, support families,
+          and build healthy mosque communities in the Gulf and beyond.
+        </p>
+
+        <div class="project-grid">
+          <div class="project-card">
+            <span class="tag">Youth & Family</span>
+            <h3>Youth Mentorship & Tarbiyah Circles</h3>
+            <p>
+              Small-group sessions for teenagers and university students,
+              focusing on identity, faith, and real-life challenges.
+            </p>
+            <ul>
+              <li>Bi-weekly halaqahs in the mosque</li>
+              <li>Q&A sessions on faith, habits, and character</li>
+              <li>Practical guidance for school & family life</li>
+            </ul>
+          </div>
+
+          <div class="project-card">
+            <span class="tag">Qur’an & Knowledge</span>
+            <h3>Community Qur’an Circles</h3>
+            <p>
+              Structured gatherings for reciting, reflecting, and living
+              the Qur’an together as a community.
+            </p>
+            <ul>
+              <li>Focus on tadabbur and implementation</li>
+              <li>Suitable for different age groups</li>
+              <li>Can be hosted in mosques or homes</li>
+            </ul>
+          </div>
+
+          <div class="project-card">
+            <span class="tag">Ramadan & Seasons</span>
+            <h3>Ramadan Programs & Iftar Talks</h3>
+            <p>
+              Special talks, nightly reminders, and community iftar programs
+              tailored for Ramadan and blessed seasons.
+            </p>
+            <ul>
+              <li>Short pre-Isha or Taraweeh reminders</li>
+              <li>Thematic series for the whole month</li>
+              <li>Custom programs for families & youth</li>
+            </ul>
+          </div>
+
+          <div class="project-card">
+            <span class="tag">Leadership</span>
+            <h3>Masjid Leadership Workshops</h3>
+            <p>
+              Training for imams, khatibs, and community leaders on how to
+              serve effectively in a modern context.
+            </p>
+            <ul>
+              <li>Communication & public speaking</li>
+              <li>Community engagement & conflict resolution</li>
+              <li>Vision, planning, and teamwork</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3) LECTURE SERIES & PROGRAMS -->
+      <section id="lectures" class="section-block">
+        <h2>Lecture Series & Programs</h2>
+        <p>
+          Structured series that can be delivered in mosques, Islamic centers,
+          schools, or as online programs.
+        </p>
+        <ul>
+          <li>
+            <strong>Foundations of Faith:</strong>
+            aaqidah, pillars of Islam, and living with certainty.
+          </li>
+          <li>
+            <strong>Purification of the Heart:</strong>
+            tackling envy, anger, arrogance, and spiritual laziness.
+          </li>
+          <li>
+            <strong>Family in Islam:</strong>
+            mercy, communication, and raising children with iman.
+          </li>
+          <li>
+            <strong>Living Islam in the Modern World:</strong>
+            balancing work, social media, and spirituality.
+          </li>
+        </ul>
+      </section>
+
+      <!-- 4) LIVE & ONLINE SESSIONS -->
+      <section id="live" class="section-block">
+        <h2>Live & Online Sessions</h2>
+        <p>
+          Sheikh Khaled is available for on-site khutbahs, weekend programs,
+          online lectures, and Q&A sessions with communities worldwide.
+        </p>
+        <p>
+          For bookings and collaboration:
+        </p>
+        <ul>
+          <li><strong>Email:</strong> contact@khaledaqassar.com</li>
+          <li><strong>Instagram:</strong> @khaledalqassar</li>
+          <li><strong>YouTube:</strong> Khaled AlQassar</li>
+        </ul>
+      </section>
 
     </section>
   </main>
