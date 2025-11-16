@@ -8,101 +8,112 @@
 
   <body>
     <main class="page-shell">
-      <section class="card">
-        <!-- HEADER -->
-        <header class="card-header">
-          <div class="header-left">
+      <section class="main-card">
+        <!-- TOP BAR -->
+        <header class="top-bar">
+          <div class="brand-block">
             <div class="avatar"></div>
-            <div class="name-block">
-              <strong>خالد القصّار</strong>
-              <span>إمام وخطيب مسجد</span>
+            <div class="name-lines">
+              <div class="name-main">خالد القصّار</div>
+              <div class="name-role">إمام وخطيب مسجد • مربي مجتمعي</div>
             </div>
           </div>
 
           <div class="lang-switch">
-            <span class="lang-pill active">العربية</span>
-            <a href="en.html" class="lang-pill">English</a>
+            <span class="lang-pill active">
+              <span class="flag">🇰🇼</span>
+              عربي
+            </span>
+            <a href="en.html" class="lang-pill">
+              <span class="flag">🇬🇧</span>
+              English
+            </a>
           </div>
         </header>
 
-        <div class="top-nav-links">
-          <span>الأقسام:</span>
-          <a href="khutbah.html">خطب الجمعة (خطب/كُتُبَة)</a>
-          <span>·</span>
-          <a href="projects.html">برامج ومشاريع</a>
-        </div>
-
-        <!-- MAIN GRID CONTENT -->
-        <div class="card-grid">
-          <!-- ABOUT -->
+        <!-- MAIN CONTENT GRID -->
+        <section class="content-grid">
+          <!-- LEFT: HERO -->
           <div>
-            <h1 class="about-title-main">إمام، خطيب مسجد، ومعلّم شرعي</h1>
-            <p class="about-subtitle">
-              خدمة المجتمع ببناء وعي شرعي متوازن ورسالة إيمانية واضحة.
+            <div class="hero-eyebrow">رسالة · إمامة · خدمة مجتمع</div>
+            <h1 class="hero-title">
+              إمام وخطيب مسجد<br />
+              يقود الكلمة
+              <span class="hero-highlight">من المنبر إلى الواقع.</span>
+            </h1>
+
+            <p class="hero-subtitle">
+              بخبرة تمتد لأكثر من عشر سنوات في الإمامة، وخطب الجمعة، والدروس
+              الشرعية، يقدّم الشيخ خالد القصّار خطاباً إيمانياً متوازناً
+              يخاطب القلب والعقل، ويربط المسجد بحياة الناس اليومية.
             </p>
 
             <div class="badge-row">
-              <span class="badge">أكثر من ١٠ سنوات خبرة</span>
-              <span class="badge">قيادة المساجد</span>
-              <span class="badge">دعم مجتمعي</span>
+              <span class="badge">١٠+ سنوات في الإمامة والخطابة</span>
+              <span class="badge">خطب الجمعة والمواعظ العامة</span>
+              <span class="badge">برامج تربوية ومجتمعية</span>
             </div>
 
-            <p class="text-soft">
-              بخبرة تمتد لأكثر من عشر سنوات في الإمامة والخطابة والتعليم الشرعي
-              وخدمة المجتمع، يقدّم الشيخ خالد القصّار دعماً روحياً ومعرفياً
-              يساعد الأفراد والأسر والمجتمعات على بناء حياة إيمانية متوازنة
-              وعملية.
-            </p>
-
-            <div class="actions-row">
-              <a href="mailto:contact@khaledaqassar.com" class="btn-primary">
-                حجز استشارة
+            <div class="action-row">
+              <a href="khutbah-ar.html" class="btn btn-primary">
+                مشاهدة خطب الجمعة بالعربية
               </a>
-              <a href="khutbah-ar.html" class="btn-ghost">
-  مشاهدة خطب الجمعة
-</a>
-              <a href="projects.html" class="btn-link">
-                عرض المشاريع والبرامج
+
+              <a href="khutbah-en.html" class="btn btn-ghost">
+                Friday Khutbah (English Page)
+              </a>
+
+              <a href="mailto:contact@khaledaqassar.com" class="btn btn-text">
+                حجز دعوة أو برنامج للمسجد →
               </a>
             </div>
           </div>
 
-          <!-- EXPERTISE -->
-          <div>
-            <h2 class="section-title">مجالات التخصص</h2>
-            <div class="chip-list">
-              <span>إدارة وقيادة المساجد</span>
-              <span>خطب الجمعة والمواعظ العامة</span>
-              <span>دروس وتعليم شرعي</span>
-              <span>إرشاد أسري ومجتمعي</span>
-            </div>
-          </div>
+          <!-- RIGHT: INFO CARDS -->
+          <aside class="card-column">
+            <article class="info-card">
+              <div class="info-title">مجالات العمل</div>
+              <div class="info-main">
+                <strong>إمامة وخطابة · تعليم شرعي · توجيه أسري ومجتمعي</strong>
+              </div>
+              <ul class="info-list">
+                <li>خطب الجمعة في المساجد</li>
+                <li>دروس أسبوعية وحلقات قرآن</li>
+                <li>برامج للشباب والعائلات</li>
+                <li>محاضرات وزيارات دعوية</li>
+              </ul>
+            </article>
 
-          <!-- CONTACT -->
-          <div>
-            <h2 class="section-title">للتواصل</h2>
+            <article class="info-card">
+              <div class="info-title">للتواصل والتنسيق</div>
+              <div class="contact-list">
+                <span class="contact-label">البريد الإلكتروني</span>
+                <a href="mailto:contact@khaledaqassar.com">
+                  contact@khaledaqassar.com
+                </a>
 
-            <div class="contact-list">
-              <span class="contact-label">البريد الإلكتروني</span>
-              <a href="mailto:contact@khaledaqassar.com">
-                contact@khaledaqassar.com
-              </a>
+                <span class="contact-label" style="margin-top: 6px;">
+                  إنستغرام
+                </span>
+                <a href="https://instagram.com/khaledalqassar" target="_blank">
+                  @khaledalqassar
+                </a>
 
-              <span class="contact-label" style="margin-top: 6px;">إنستغرام</span>
-              <a href="https://instagram.com/khaledalqassar" target="_blank">
-                @khaledalqassar
-              </a>
-
-              <span class="contact-label" style="margin-top: 6px;">يوتيوب</span>
-              <span>Khaled AlQassar</span>
-            </div>
-          </div>
-        </div>
+                <span class="contact-label" style="margin-top: 6px;">
+                  يوتيوب
+                </span>
+                <a href="#" target="_blank">
+                  قناة خالد القصّار
+                </a>
+              </div>
+            </article>
+          </aside>
+        </section>
 
         <!-- FOOTER -->
-        <footer class="card-footer">
+        <footer class="footer-row">
           <span>© ٢٠٢٥ خالد القصّار</span>
-          <span>إمام • خطيب مسجد • معلّم شرعي</span>
+          <span>إمام • خطيب مسجد • مربي مجتمعي</span>
         </footer>
       </section>
     </main>
