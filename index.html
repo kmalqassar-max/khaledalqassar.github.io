@@ -2,810 +2,260 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>الموقع العلمي</title>
-
-  <!-- ฟอนต์ Google (เลือกตามชอบ) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet" />
-
-  <style>
-    :root {
-      --bg-body: #f5f2ec;
-      --bg-page: #ffffff;
-      --bg-header: #ffffff;
-      --bg-card: #ffffff;
-      --bg-badge: #f2e4d2;
-      --text-main: #1f2933;
-      --text-muted: #6b7280;
-      --accent: #c49a5a;
-      --accent-soft: #f2e4d2;
-      --border-soft: #e5e7eb;
-      --shadow-soft: 0 10px 30px rgba(15, 23, 42, 0.06);
-      --radius-lg: 22px;
-      --radius-md: 16px;
-      --radius-pill: 999px;
-      --transition-fast: 0.18s ease-out;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: "Cairo", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #f7efe3 0, var(--bg-body) 45%, #e8e1d7 100%);
-      color: var(--text-main);
-      line-height: 1.6;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: none;
-    }
-
-    .page {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 16px 12px 40px;
-    }
-
-    /* Top bar */
-    .topbar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: rgba(255, 255, 255, 0.9);
-      backdrop-filter: blur(8px);
-      border-radius: var(--radius-pill);
-      padding: 6px 14px 6px 6px;
-      border: 1px solid rgba(0, 0, 0, 0.03);
-      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.04);
-      margin-bottom: 14px;
-      gap: 10px;
-    }
-
-    .topbar-left {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .logo-circle {
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      background: radial-gradient(circle at 30% 20%, #ffe5b5, #c49a5a);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-weight: 700;
-      font-size: 18px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
-      flex-shrink: 0;
-    }
-
-    .topbar-title-group {
-      display: flex;
-      flex-direction: column;
-      gap: 1px;
-    }
-
-    .site-title {
-      font-size: 16px;
-      font-weight: 700;
-    }
-
-    .site-subtitle {
-      font-size: 11px;
-      color: var(--text-muted);
-    }
-
-    .topbar-right {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 11px;
-      color: var(--text-muted);
-    }
-
-    .topbar-divider {
-      width: 1px;
-      height: 20px;
-      background: #e5e7eb;
-    }
-
-    .lang-switch {
-      display: flex;
-      align-items: center;
-      border-radius: var(--radius-pill);
-      border: 1px solid #e5e7eb;
-      padding: 1px;
-      background: #f9fafb;
-      font-size: 11px;
-    }
-
-    .lang-btn {
-      border-radius: var(--radius-pill);
-      padding: 4px 10px;
-      cursor: pointer;
-      border: none;
-      background: transparent;
-      font-size: 11px;
-      color: var(--text-muted);
-      transition: background var(--transition-fast), color var(--transition-fast);
-    }
-
-    .lang-btn.active {
-      background: #111827;
-      color: #f9fafb;
-    }
-
-    /* Header / nav */
-    .header {
-      background: var(--bg-header);
-      border-radius: var(--radius-lg);
-      padding: 14px 18px 10px;
-      box-shadow: var(--shadow-soft);
-      border: 1px solid rgba(0, 0, 0, 0.03);
-      margin-bottom: 16px;
-    }
-
-    .header-top-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 10px;
-    }
-
-    .header-top-right {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-      font-size: 11px;
-      color: var(--text-muted);
-      text-align: left;
-    }
-
-    .header-top-right span:first-child {
-      font-weight: 600;
-      color: #4b5563;
-    }
-
-    .main-nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      border-top: 1px solid #f3f4f6;
-      padding-top: 10px;
-      margin-top: 6px;
-    }
-
-    .nav-pill {
-      padding: 5px 12px;
-      border-radius: var(--radius-pill);
-      font-size: 12px;
-      border: 1px solid transparent;
-      cursor: pointer;
-      background: #f9fafb;
-      color: #4b5563;
-      transition: background var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
-      white-space: nowrap;
-    }
-
-    .nav-pill:hover {
-      transform: translateY(-1px);
-      background: #f3f4f6;
-    }
-
-    .nav-pill.active {
-      background: var(--accent);
-      color: #fdfdfd;
-      border-color: var(--accent);
-      box-shadow: 0 6px 16px rgba(180, 132, 60, 0.35);
-    }
-
-    /* Layout main */
-    .layout {
-      display: grid;
-      grid-template-columns: minmax(0, 2.1fr) minmax(260px, 0.9fr);
-      gap: 18px;
-      margin-top: 16px;
-    }
-
-    @media (max-width: 880px) {
-      .layout {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-
-    /* Cards generic */
-    .card {
-      background: var(--bg-card);
-      border-radius: var(--radius-lg);
-      padding: 16px 16px 14px;
-      box-shadow: var(--shadow-soft);
-      border: 1px solid rgba(0, 0, 0, 0.02);
-    }
-
-    .card-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 10px;
-      margin-bottom: 8px;
-    }
-
-    .card-title {
-      font-size: 17px;
-      font-weight: 700;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .card-badge {
-      font-size: 10px;
-      padding: 4px 10px;
-      border-radius: var(--radius-pill);
-      background: var(--bg-badge);
-      color: #783f04;
-      font-weight: 600;
-    }
-
-    .card-subtitle {
-      font-size: 12px;
-      color: var(--text-muted);
-      margin-bottom: 8px;
-    }
-
-    .ayah-text {
-      font-size: 20px;
-      font-weight: 600;
-      margin: 6px 0 4px;
-    }
-
-    .ayah-ref {
-      font-size: 13px;
-      color: var(--accent);
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-
-    .card-footer-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      font-size: 12px;
-      color: var(--accent);
-      font-weight: 600;
-      margin-top: 4px;
-    }
-
-    .card-footer-link span {
-      font-size: 16px;
-      line-height: 1;
-    }
-
-    /* Latest content cards */
-    .section-title-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 10px;
-      margin: 18px 0 10px;
-    }
-
-    .section-title {
-      font-size: 16px;
-      font-weight: 700;
-    }
-
-    .section-filters {
-      display: flex;
-      gap: 6px;
-      flex-wrap: wrap;
-    }
-
-    .filter-pill {
-      font-size: 11px;
-      padding: 3px 9px;
-      border-radius: var(--radius-pill);
-      border: 1px solid #e5e7eb;
-      background: #f9fafb;
-      color: #6b7280;
-      cursor: pointer;
-      white-space: nowrap;
-    }
-
-    .filter-pill.active {
-      border-color: var(--accent);
-      color: #783f04;
-      background: #fdf7ed;
-    }
-
-    .grid-articles {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-      gap: 10px;
-    }
-
-    .article-card {
-      background: #fdfdfd;
-      border-radius: var(--radius-md);
-      border: 1px solid #f1f2f4;
-      padding: 11px 11px 10px;
-      transition: box-shadow var(--transition-fast), transform var(--transition-fast), border-color var(--transition-fast), background var(--transition-fast);
-      cursor: pointer;
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-      min-height: 90px;
-    }
-
-    .article-card:hover {
-      box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08);
-      transform: translateY(-2px);
-      border-color: #e5e7eb;
-      background: #ffffff;
-    }
-
-    .article-title {
-      font-size: 13px;
-      font-weight: 600;
-      margin-bottom: 2px;
-    }
-
-    .article-meta {
-      font-size: 11px;
-      color: var(--text-muted);
-      display: flex;
-      justify-content: space-between;
-      gap: 6px;
-    }
-
-    .article-tag {
-      font-size: 10px;
-      padding: 2px 7px;
-      border-radius: var(--radius-pill);
-      background: #f3f4f6;
-      color: #4b5563;
-      white-space: nowrap;
-    }
-
-    /* Sidebar widgets */
-    .widget-title {
-      font-size: 15px;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-
-    .prayer-widget {
-      background: radial-gradient(circle at top, #fdf5e7 0, #f9f5ee 60%, #f4ebdf 100%);
-      border-radius: var(--radius-lg);
-      padding: 14px 14px 10px;
-      border: 1px solid rgba(0, 0, 0, 0.02);
-      box-shadow: var(--shadow-soft);
-      margin-bottom: 12px;
-    }
-
-    .prayer-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      margin-bottom: 6px;
-      gap: 6px;
-    }
-
-    .prayer-city {
-      font-size: 13px;
-      font-weight: 600;
-    }
-
-    .prayer-now {
-      font-size: 11px;
-      color: var(--text-muted);
-    }
-
-    .prayer-next {
-      font-size: 11px;
-      color: #783f04;
-      margin-bottom: 6px;
-    }
-
-    .prayer-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 6px;
-      font-size: 11px;
-    }
-
-    .prayer-item {
-      background: rgba(255, 255, 255, 0.7);
-      border-radius: 12px;
-      padding: 5px 6px;
-      text-align: center;
-      border: 1px solid rgba(255, 255, 255, 0.8);
-    }
-
-    .prayer-name {
-      font-weight: 600;
-      margin-bottom: 1px;
-      font-size: 11px;
-    }
-
-    .prayer-time {
-      color: #4b5563;
-      font-size: 11px;
-    }
-
-    .list-widget {
-      margin-top: 12px;
-    }
-
-    .list-items {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .list-item {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-      padding: 7px 0;
-      border-bottom: 1px dashed #e5e7eb;
-      cursor: pointer;
-      transition: color var(--transition-fast), transform var(--transition-fast);
-    }
-
-    .list-item:last-child {
-      border-bottom: none;
-    }
-
-    .list-item:hover {
-      transform: translateX(-2px);
-      color: #111827;
-    }
-
-    .list-item-title {
-      font-size: 13px;
-      font-weight: 600;
-    }
-
-    .list-item-meta {
-      font-size: 11px;
-      color: var(--text-muted);
-      display: flex;
-      justify-content: space-between;
-      gap: 6px;
-    }
-
-    /* Footer */
-    .footer {
-      margin-top: 26px;
-      font-size: 11px;
-      color: var(--text-muted);
-      text-align: center;
-    }
-
-    .footer-top {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin-bottom: 6px;
-      flex-wrap: wrap;
-    }
-
-    .footer-link {
-      cursor: pointer;
-    }
-
-    .footer-bottom {
-      font-size: 10px;
-    }
-
-    @media (max-width: 580px) {
-      .topbar {
-        border-radius: 18px;
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .topbar-right {
-        width: 100%;
-        justify-content: space-between;
-      }
-      .header-top-row {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    }
-  </style>
+  <title>خطب الجمعة | خالد القصّار</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="rtl">
   <div class="page">
-    <!-- TOPBAR -->
-    <div class="topbar">
-      <div class="topbar-left">
-        <div class="logo-circle">
-          ع
-        </div>
-        <div class="topbar-title-group">
-          <div class="site-title">الموقع العلمي للشيخ</div>
-          <div class="site-subtitle">منصة رقمية للمواد الصوتية والمرئية والمقروءة</div>
-        </div>
-      </div>
-      <div class="topbar-right">
-        <div class="topbar-date">
-          الإثنين - 17 / نوفمبر / 2025
-        </div>
-        <div class="topbar-divider"></div>
-        <div class="lang-switch">
-          <button class="lang-btn active" type="button">العربية</button>
-          <button class="lang-btn" type="button">English</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- HEADER & NAV -->
-    <header class="header">
-      <div class="header-top-row">
-        <div>
-          <div style="font-size: 14px; font-weight: 700; margin-bottom: 3px;">
-            بسم الله الرحمن الرحيم
-          </div>
-          <div style="font-size: 12px; color: var(--text-muted);">
-            مرحبًا بكم في المنصة الرسمية للمواد العلمية والدروس والمحاضرات.
-          </div>
-        </div>
-        <div class="header-top-right">
-          <span>ابحث في المحتوى</span>
-          <span>تفسير • حديث • عقيدة • رقائق • كتب • مقاطع مميزة</span>
-        </div>
-      </div>
-
-      <nav class="main-nav">
-        <button class="nav-pill active" type="button">الكل</button>
-        <button class="nav-pill" type="button">التفسير والتدبر</button>
-        <button class="nav-pill" type="button">شروح الكتب</button>
-        <button class="nav-pill" type="button">سلاسل علمية</button>
-        <button class="nav-pill" type="button">محاضرات</button>
-        <button class="nav-pill" type="button">كلمات عامة</button>
-        <button class="nav-pill" type="button">كتب</button>
-        <button class="nav-pill" type="button">التفسير الصوتي</button>
-      </nav>
-    </header>
-
-    <!-- MAIN LAYOUT -->
-    <main class="layout">
-      <!-- MAIN CONTENT -->
-      <section>
-        <!-- Featured Ayah Card -->
-        <article class="card">
-          <div class="card-header">
-            <div class="card-title">
-              آية وتدبر
-              <span class="card-badge">تأملات قرآنية</span>
-            </div>
-            <div style="font-size: 11px; color: var(--text-muted);">
-              من سلسلة التدبر اليومي
-            </div>
-          </div>
-
-          <div class="card-subtitle">
-            قال الله تعالى:
-          </div>
-
-          <div class="ayah-text">
-            ﴿اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ﴾
-          </div>
-          <div class="ayah-ref">
-            آل عمران - الآية ٢
-          </div>
-
-          <div style="font-size: 13px; color: #4b5563;">
-            هذه الآية العظيمة افتُتحت باسم الجلالة "الله"، وهو الاسم الجامع لكل معاني الكمال،
-            وتكرار ذكر هذا الاسم يربط القلب بربه في كل حال، فلا ملجأ ولا منجى منه إلا إليه.
-          </div>
-
-          <a href="#" class="card-footer-link">
-            المزيد من الشرح
-            <span>↩</span>
-          </a>
-        </article>
-
-        <!-- Latest Content Section -->
-        <div class="section-title-row">
-          <div class="section-title">المواد المضافة حديثًا</div>
-          <div class="section-filters">
-            <button class="filter-pill active" type="button">الكل</button>
-            <button class="filter-pill" type="button">صوتي</button>
-            <button class="filter-pill" type="button">مرئي</button>
-            <button class="filter-pill" type="button">نصي</button>
+    <main class="card">
+      <header class="card-header">
+        <div class="avatar-block">
+          <div class="avatar"></div>
+          <div>
+            <div class="name-main">خطب الجمعة</div>
+            <div class="name-sub">مجموعة من الخطب والمواعظ</div>
           </div>
         </div>
 
-        <div class="grid-articles">
-          <article class="article-card">
-            <div class="article-title">شرح كتاب التسهيل لابن جزي – الدرس الأول</div>
-            <div class="article-meta">
-              <span>23 / 04 / 2018</span>
-              <span class="article-tag">تفسير</span>
-            </div>
-          </article>
+        <nav class="lang-switch">
+          <a href="khutbah-ar.html" class="lang-pill active">العربية</a>
+          <a href="khutbah-en.html" class="lang-pill">English</a>
+        </nav>
+      </header>
 
-          <article class="article-card">
-            <div class="article-title">مجالس في تدبر القرآن – سورة الماعون</div>
-            <div class="article-meta">
-              <span>05 / 01 / 1435</span>
-              <span class="article-tag">تدبر</span>
-            </div>
-          </article>
+      <section class="sections-stack">
+        <div class="section-block">
+          <h2>فيديوهات خطب الجمعة</h2>
+          <p>
+            مجموعة من خطب الجمعة والمواعظ المختارة لفضيلة الشيخ خالد القصّار.
+          </p>
 
-          <article class="article-card">
-            <div class="article-title">معاني الأذكار من حصن المسلم – المقدمة</div>
-            <div class="article-meta">
-              <span>20 / 03 / 2018</span>
-              <span class="article-tag">حديث</span>
+          <div class="video-grid">
+            <!-- ใช้ src เดียวกับ khutbah-en.html -->
+            <div class="video-card">
+              <p class="video-card-title">١</p>
+              <iframe src="https://www.youtube.com/embed/hOVH-O-P9sk" allowfullscreen></iframe>
             </div>
-          </article>
+            <div class="video-card">
+              <p class="video-card-title">٢</p>
+              <iframe src="https://www.youtube.com/embed/bM78sdJRmz8" allowfullscreen></iframe>
+            </div>
+            <div class="video-card">
+              <p class="video-card-title">٣</p>
+              <iframe src="https://www.youtube.com/embed/H2Pn1N2Jnew" allowfullscreen></iframe>
+            </div>
+            <div class="video-card">
+              <p class="video-card-title">٤</p>
+              <iframe src="https://www.youtube.com/embed/qLj9ovxCg_Y" allowfullscreen></iframe>
+            </div>
 
-          <article class="article-card">
-            <div class="article-title">التوبة والإنابة إلى الله – الدرس الأول</div>
-            <div class="article-meta">
-              <span>04 / 03 / 1428</span>
-              <span class="article-tag">رقائق</span>
+            <div class="video-card">
+              <p class="video-card-title">٥</p>
+              <iframe src="https://www.youtube.com/embed/j9D1tHDd8d0" allowfullscreen></iframe>
             </div>
-          </article>
+            <div class="video-card">
+              <p class="video-card-title">٦</p>
+              <iframe src="https://www.youtube.com/embed/iOYkV0k4j-o" allowfullscreen></iframe>
+            </div>
+            <div class="video-card">
+              <p class="video-card-title">٧</p>
+              <iframe src="https://www.youtube.com/embed/YtdgS9h1vjQ" allowfullscreen></iframe>
+            </div>
+            <div class="video-card">
+              <p class="video-card-title">٨</p>
+              <iframe src="https://www.youtube.com/embed/wNLIZkCmFQg" allowfullscreen></iframe>
+            </div>
+            <div class="video-card">
+              <p class="video-card-title">٩</p>
+              <iframe src="https://www.youtube.com/embed/kxOqp6kdblY" allowfullscreen></iframe>
+            </div>
+            <div class="video-card">
+              <p class="video-card-title">١٠</p>
+              <iframe src="https://www.youtube.com/embed/WejFdDnkJ2w" allowfullscreen></iframe>
+            </div>
 
-          <article class="article-card">
-            <div class="article-title">أهمية الأمثال في القرآن الكريم</div>
-            <div class="article-meta">
-              <span>03 / 09 / 1429</span>
-              <span class="article-tag">محاضرة</span>
+            <!-- ต่อเลขไปเรื่อย ๆ ตามลำดับเดียวกับ khutbah-en -->
+            <div class="video-card">
+              <p class="video-card-title">١١</p>
+              <iframe src="https://www.youtube.com/embed/KZCtgRN4KNw" allowfullscreen></iframe>
             </div>
-          </article>
+            <div class="video-card">
+              <p class="video-card-title">١٢</p>
+              <iframe src="https://www.youtube.com/embed/gIO4Y5dwpfk" allowfullscreen></iframe>
+            </div>
+            <div class="video-card">
+              <p class="video-card-title">١٣</p>
+              <iframe src="https://www.youtube.com/embed/VEyeTHiax-I" allowfullscreen></iframe>
+            </div>
+            <div class="video-card">
+              <p class="video-card-title">١٤</p>
+              <iframe src="https://www.youtube.com/embed/sFzEiO_FcYI" allowfullscreen></iframe>
+            </div>
+            <div class="video-card">
+              <p class="video-card-title">١٥</p>
+              <iframe src="https://www.youtube.com/embed/Za08nXx3tZE" allowfullscreen></iframe>
+            </div>
+            <div class="video-card">
+              <p class="video-card-title">١٦</p>
+              <iframe src="https://www.youtube.com/embed/nlUREtN4E5o" allowfullscreen></iframe>
+            </div>
+            <div class="video-card">
+              <p class="video-card-title">١٧</p>
+              <iframe src="https://www.youtube.com/embed/illS2YBYHZ0" allowfullscreen></iframe>
+            </div>
+            <div class="video-card">
+              <p class="video-card-title">١٨</p>
+              <iframe src="https://www.youtube.com/embed/B84QX9TkpaE" allowfullscreen></iframe>
+            </div>
+            <div class="video-card">
+              <p class="video-card-title">١٩</p>
+              <iframe src="https://www.youtube.com/embed/3cunnhM2KKg" allowfullscreen></iframe>
+            </div>
+            <div class="video-card">
+              <p class="video-card-title">٢٠</p>
+              <iframe src="https://www.youtube.com/embed/9AIzirS8hHk" allowfullscreen></iframe>
+            </div>
 
-          <article class="article-card">
-            <div class="article-title">حديث «إنما الأعمال بالنيات…» – شرح مختصر</div>
-            <div class="article-meta">
-              <span>10 / 05 / 1441</span>
-              <span class="article-tag">حديث</span>
+            <!-- ٢١–٥٠ เหมือนกันกับ en -->
+            <div class="video-card">
+              <p class="video-card-title">٢١</p>
+              <iframe src="https://www.youtube.com/embed/hHELfAF7DM0" allowfullscreen></iframe>
             </div>
-          </article>
+            <div class="video-card">
+              <p class="video-card-title">٢٢</p>
+              <iframe src="https://www.youtube.com/embed/cJ-Miz29LVk" allowfullscreen></iframe>
+            </div>
+            <div class="video-card">
+              <p class="video-card-title">٢٣</p>
+              <iframe src="https://www.youtube.com/embed/IEhfbi37pJw" allowfullscreen></iframe>
+            </div>
+            <div class="video-card">
+              <p class="video-card-title">٢٤</p>
+              <iframe src="https://www.youtube.com/embed/Z9s77-fzhIg" allowfullscreen></iframe>
+            </div>
+            <div class="video-card">
+              <p class="video-card-title">٢٥</p>
+              <iframe src="https://www.youtube.com/embed/wN01wBJ2ep4" allowfullscreen></iframe>
+            </div>
+            <div class="video-card">
+              <p class="video-card-title">٢٦</p>
+              <iframe src="https://www.youtube.com/embed/EDh5bQN1KPg" allowfullscreen></iframe>
+            </div>
+            <div class="video-card">
+              <p class="video-card-title">٢٧</p>
+              <iframe src="https://www.youtube.com/embed/2EsGBVApXFU" allowfullscreen></iframe>
+            </div>
+            <div class="video-card">
+              <p class="video-card-title">٢٨</p>
+              <iframe src="https://www.youtube.com/embed/P_uarBwZ-jA" allowfullscreen></iframe>
+            </div>
+            <div class="video-card">
+              <p class="video-card-title">٢٩</p>
+              <iframe src="https://www.youtube.com/embed/_xszfWBnG9k" allowfullscreen></iframe>
+            </div>
+            <div class="video-card">
+              <p class="video-card-title">٣٠</p>
+              <iframe src="https://www.youtube.com/embed/yr25gUu67Ko" allowfullscreen></iframe>
+            </div>
+
+            <div class="video-card">
+              <p class="video-card-title">٣١</p>
+              <iframe src="https://www.youtube.com/embed/PiTo6Gk8Mns" allowfullscreen></iframe>
+            </div>
+            <div class="video-card">
+              <p class="video-card-title">٣٢</p>
+              <iframe src="https://www.youtube.com/embed/yXpBRK_Jzmw" allowfullscreen></iframe>
+            </div>
+            <div class="video-card">
+              <p class="video-card-title">٣٣</p>
+              <iframe src="https://www.youtube.com/embed/Zo1h5uPHmWM" allowfullscreen></iframe>
+            </div>
+            <div class="video-card">
+              <p class="video-card-title">٣٤</p>
+              <iframe src="https://www.youtube.com/embed/oOo3ET27Qsg" allowfullscreen></iframe>
+            </div>
+            <div class="video-card">
+              <p class="video-card-title">٣٥</p>
+              <iframe src="https://www.youtube.com/embed/Su2L9BarmaA" allowfullscreen></iframe>
+            </div>
+            <div class="video-card">
+              <p class="video-card-title">٣٦</p>
+              <iframe src="https://www.youtube.com/embed/_8b1Yjz8j60" allowfullscreen></iframe>
+            </div>
+            <div class="video-card">
+              <p class="video-card-title">٣٧</p>
+              <iframe src="https://www.youtube.com/embed/qanRdKrPhPc" allowfullscreen></iframe>
+            </div>
+            <div class="video-card">
+              <p class="video-card-title">٣٨</p>
+              <iframe src="https://www.youtube.com/embed/Z0I7BeHoiyY" allowfullscreen></iframe>
+            </div>
+            <div class="video-card">
+              <p class="video-card-title">٣٩</p>
+              <iframe src="https://www.youtube.com/embed/wGKoT-KisIQ" allowfullscreen></iframe>
+            </div>
+            <div class="video-card">
+              <p class="video-card-title">٤٠</p>
+              <iframe src="https://www.youtube.com/embed/ZjAI3uXc46Y" allowfullscreen></iframe>
+            </div>
+
+            <div class="video-card">
+              <p class="video-card-title">٤١</p>
+              <iframe src="https://www.youtube.com/embed/3I9F43sWEig" allowfullscreen></iframe>
+            </div>
+            <div class="video-card">
+              <p class="video-card-title">٤٢</p>
+              <iframe src="https://www.youtube.com/embed/14b7t6RFMCk" allowfullscreen></iframe>
+            </div>
+            <div class="video-card">
+              <p class="video-card-title">٤٣</p>
+              <iframe src="https://www.youtube.com/embed/wsLF-tgGVC4" allowfullscreen></iframe>
+            </div>
+            <div class="video-card">
+              <p class="video-card-title">٤٤</p>
+              <iframe src="https://www.youtube.com/embed/EGzJ2SvQkAw" allowfullscreen></iframe>
+            </div>
+            <div class="video-card">
+              <p class="video-card-title">٤٥</p>
+              <iframe src="https://www.youtube.com/embed/hJav5JHy82w" allowfullscreen></iframe>
+            </div>
+            <div class="video-card">
+              <p class="video-card-title">٤٦</p>
+              <iframe src="https://www.youtube.com/embed/vfGTcG8XwU8" allowfullscreen></iframe>
+            </div>
+            <div class="video-card">
+              <p class="video-card-title">٤٧</p>
+              <iframe src="https://www.youtube.com/embed/mLnCXuOdO98" allowfullscreen></iframe>
+            </div>
+            <div class="video-card">
+              <p class="video-card-title">٤٨</p>
+              <iframe src="https://www.youtube.com/embed/0XgnOPgQITo" allowfullscreen></iframe>
+            </div>
+            <div class="video-card">
+              <p class="video-card-title">٤٩</p>
+              <iframe src="https://www.youtube.com/embed/on-b42w3Fu0" allowfullscreen></iframe>
+            </div>
+            <div class="video-card">
+              <p class="video-card-title">٥٠</p>
+              <iframe src="https://www.youtube.com/embed/nZjz-WDdGhE" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-block">
+          <p>
+            <a href="index.html">العودة إلى الصفحة الرئيسية العربية</a> ·
+            <a href="en.html">English Home</a>
+          </p>
         </div>
       </section>
 
-      <!-- SIDEBAR -->
-      <aside>
-        <!-- Prayer widget -->
-        <section class="prayer-widget">
-          <div class="prayer-header">
-            <div class="prayer-city">مواقيت الصلاة – الدمام</div>
-            <div class="prayer-now">الوقت الآن: 12:26 م</div>
-          </div>
-          <div class="prayer-next">
-            المتبقي لصلاة العصر: --:--:--
-          </div>
-          <div class="prayer-grid">
-            <div class="prayer-item">
-              <div class="prayer-name">الفجر</div>
-              <div class="prayer-time">04:11 ص</div>
-            </div>
-            <div class="prayer-item">
-              <div class="prayer-name">الظهر</div>
-              <div class="prayer-time">11:45 ص</div>
-            </div>
-            <div class="prayer-item">
-              <div class="prayer-name">العصر</div>
-              <div class="prayer-time">03:15 م</div>
-            </div>
-            <div class="prayer-item">
-              <div class="prayer-name">المغرب</div>
-              <div class="prayer-time">05:32 م</div>
-            </div>
-            <div class="prayer-item">
-              <div class="prayer-name">العشاء</div>
-              <div class="prayer-time">07:02 م</div>
-            </div>
-            <div class="prayer-item">
-              <div class="prayer-name">الشروق</div>
-              <div class="prayer-time">05:37 ص</div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Most viewed -->
-        <section class="card list-widget">
-          <div class="widget-title">الأكثر مشاهدة</div>
-          <ul class="list-items">
-            <li class="list-item">
-              <span class="list-item-title">[1] قوله تعالى: ﴿يَا أَيُّهَا النَّبِيُّ إِذَا طَلَّقْتُمُ النِّسَاء﴾</span>
-              <div class="list-item-meta">
-                <span>التفسير والتدبر</span>
-                <span>201,481 زيارة</span>
-              </div>
-            </li>
-            <li class="list-item">
-              <span class="list-item-title">حديث «ليس الشديد بالصُّرَعة..»</span>
-              <div class="list-item-meta">
-                <span>شروح الكتب</span>
-                <span>196,813 زيارة</span>
-              </div>
-            </li>
-            <li class="list-item">
-              <span class="list-item-title">وصيتي لكل محزون</span>
-              <div class="list-item-meta">
-                <span>محاضرات</span>
-                <span>44,900 زيارة</span>
-              </div>
-            </li>
-            <li class="list-item">
-              <span class="list-item-title">طالب العلم ومواسم العبادة</span>
-              <div class="list-item-meta">
-                <span>محاضرات</span>
-                <span>81,546 زيارة</span>
-              </div>
-            </li>
-          </ul>
-        </section>
-      </aside>
+      <footer class="card-footer">
+        <span>© ٢٠٢٥ خالد القصّار</span>
+        <span>مجموعة خطب الجمعة</span>
+      </footer>
     </main>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-      <div class="footer-top">
-        <span class="footer-link">اتصل بنا</span>
-        <span>•</span>
-        <span class="footer-link">سياسة الخصوصية</span>
-        <span>•</span>
-        <span class="footer-link">التطبيقات</span>
-      </div>
-      <div class="footer-bottom">
-        جميع الحقوق محفوظة © 2025 – يمكن تعديل هذا النص حسب الحاجة
-      </div>
-    </footer>
   </div>
-
-  <!-- JS เล็ก ๆ ถ้าอยากทำปุ่ม active เล่น ๆ (ไม่จำเป็นต้องใช้ก็ได้) -->
-  <script>
-    // toggle active class for nav pills
-    document.querySelectorAll(".nav-pill").forEach(function (btn) {
-      btn.addEventListener("click", function () {
-        document.querySelectorAll(".nav-pill").forEach(function (b) {
-          b.classList.remove("active");
-        });
-        btn.classList.add("active");
-      });
-    });
-
-    // toggle active class for filter pills
-    document.querySelectorAll(".filter-pill").forEach(function (btn) {
-      btn.addEventListener("click", function () {
-        document.querySelectorAll(".filter-pill").forEach(function (b) {
-          b.classList.remove("active");
-        });
-        btn.classList.add("active");
-      });
-    });
-
-    // toggle active lang button (ฟรอนต์เฉย ๆ ยังไม่ได้เปลี่ยนภาษา)
-    document.querySelectorAll(".lang-btn").forEach(function (btn) {
-      btn.addEventListener("click", function () {
-        document.querySelectorAll(".lang-btn").forEach(function (b) {
-          b.classList.remove("active");
-        });
-        btn.classList.add("active");
-      });
-    });
-  </script>
 </body>
 </html>
