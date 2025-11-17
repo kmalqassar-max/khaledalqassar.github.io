@@ -1,354 +1,171 @@
-/* ========= THEME COLORS ========= */
+/* ============================
+   Global Theme — Beige + White
+   ============================ */
+
 :root {
-  --bg-page: #f4f1ea;        /* พื้นหลังด้านนอกเบาๆ */
-  --card-bg: #ffffff;        /* กล่องหลักสีขาว */
-  --card-border: #e3d5b8;    /* ขอบเบจ */
-  --accent: #c2882f;         /* สีทอง/น้ำตาลสำหรับปุ่ม & ลิงก์หลัก */
-  --accent-soft: #f7e5c8;
-  --text-main: #1f2933;
-  --text-muted: #6b7280;
+  --bg-top: #f7f3ee;       /* น้ำตาลอ่อนครีมด้านบน */
+  --bg-bottom: #f2eee9;    /* ครีมเข้มนิดๆ */
+  --card-bg: #ffffff;      /* การ์ดขาว */
+  --card-border: #e5e0da;  /* ขอบสีเบจ */
+  --accent: #b6895b;       /* น้ำตาลทองหรูๆ */
+  --accent-hover: #a3784d;
+  --text-main: #2b2b2b;
+  --text-muted: #6b6b6b;
+  --radius: 28px;
 }
 
-/* ========= RESET ========= */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html, body {
-  height: 100%;
-}
+/* RESET */
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    "Tahoma", sans-serif;
-  background: radial-gradient(circle at top, #f9f5ed 0, #f4f1ea 40%, #f9fafb 100%);
+  font-family: "Tajawal", system-ui, sans-serif;
+  background: linear-gradient(to bottom, var(--bg-top), var(--bg-bottom));
   color: var(--text-main);
-  line-height: 1.7;
+  padding: 30px 16px;
+  line-height: 1.8;
 }
 
-/* รองรับ RTL / LTR */
-[dir="rtl"] body {
-  direction: rtl;
-  text-align: right;
-}
+/* RTL support */
+[dir="rtl"] body { direction: rtl; text-align: right; }
+[dir="ltr"] body { direction: ltr; text-align: left; }
 
-[dir="ltr"] body {
-  direction: ltr;
-}
-
-/* ========= MAIN CARD ========= */
+/* ============================
+   MAIN CARD
+   ============================ */
 .page {
-  max-width: 1080px;
-  margin: 32px auto 40px;
+  max-width: 1150px;
+  margin: auto;
   background: var(--card-bg);
-  border-radius: 28px;
   border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  padding: 38px 42px 48px;
   box-shadow:
-    0 22px 60px rgba(148, 123, 80, 0.18),
-    0 0 0 1px rgba(148, 163, 184, 0.18);
-  padding: 26px 28px 30px;
+    0 20px 55px rgba(0,0,0,0.08),
+    0 0 0 1px var(--card-border);
 }
 
-/* ========= TOP BAR ========= */
-.top-bar {
+/* ============================
+   Layout
+   ============================ */
+.header-row {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  gap: 18px;
-  margin-bottom: 18px;
-}
-
-.brand {
-  display: flex;
   align-items: center;
-  gap: 14px;
 }
 
-.brand-logo {
-  width: 60px;
-  height: 60px;
-  border-radius: 20px;
-  background: radial-gradient(circle at 25% 20%, #fde68a, #f97316 45%, #92400e 100%);
-  box-shadow:
-    0 14px 30px rgba(148, 90, 40, 0.45),
-    0 0 0 1px rgba(148, 90, 40, 0.14);
-}
-
-.brand-text-title {
-  font-size: 22px;
-  font-weight: 700;
-}
-
-.brand-text-sub {
-  font-size: 13px;
-  color: var(--text-muted);
-}
-
-/* Language pills */
 .lang-switch {
   display: flex;
   gap: 8px;
 }
 
-.lang-pill {
-  font-size: 13px;
+.lang-switch button {
   padding: 6px 14px;
-  border-radius: 999px;
-  border: 1px solid #d4c6a5;
-  background: #fdfaf4;
-  color: #7c6643;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.lang-pill span.flag {
+  border-radius: 16px;
+  border: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
   font-size: 14px;
 }
 
-.lang-pill.active {
+.lang-switch button.active {
   background: var(--accent);
-  color: #fefaf3;
+  color: white;
   border-color: var(--accent);
 }
 
-/* ========= NAV BAR (แถบสีเบจ) ========= */
-.nav-bar {
-  margin-bottom: 20px;
-  background: linear-gradient(to right, #f4e2c7, #f7ead3);
-  border-radius: 18px;
-  padding: 8px 14px;
+/* ============================
+   Profile
+   ============================ */
+.profile {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
+  gap: 32px;
+  margin-top: 28px;
 }
 
-.nav-title {
-  font-size: 14px;
-  font-weight: 600;
-  color: #7c6643;
+.profile-left {
+  width: 34%;
 }
 
-.nav-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  font-size: 13px;
+.avatar {
+  width: 86px;
+  height: 86px;
+  border-radius: 22px;
+  background: linear-gradient(145deg, #e5d4c1, #bfa891);
+  margin-bottom: 16px;
 }
 
-.nav-links a {
-  text-decoration: none;
-  color: #5f4b2b;
-  padding: 4px 10px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.7);
-  border: 1px solid rgba(222, 192, 141, 0.6);
-}
-
-.nav-links a:hover {
-  background: #fef7ea;
-}
-
-/* ========= MAIN CONTENT LAYOUT ========= */
-.main-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 2fr) minmax(0, 1.6fr) minmax(0, 1.4fr);
-  gap: 26px;
-  margin-bottom: 20px;
-}
-
-/* Left column – intro */
-.col-intro-title {
-  font-size: 24px;
+.name {
+  font-size: 26px;
   font-weight: 700;
-  line-height: 1.4;
-  margin-bottom: 10px;
+  margin-bottom: 2px;
 }
 
-.col-intro-lead {
-  font-size: 14px;
-  color: var(--accent);
-  margin-bottom: 14px;
-}
-
-.col-intro-text {
-  font-size: 14px;
+.title {
+  font-size: 16px;
   color: var(--text-muted);
-  margin-bottom: 18px;
 }
 
-.intro-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 18px;
+/* ============================
+   Contact
+   ============================ */
+.section-title {
+  margin: 22px 0 10px;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--accent);
 }
 
-.tag {
-  font-size: 11px;
-  padding: 4px 10px;
-  border-radius: 999px;
-  background: var(--accent-soft);
-  color: #7c4a10;
-  border: 1px solid rgba(194, 136, 47, 0.4);
-}
-
-.button-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-/* Buttons */
-.btn-primary,
-.btn-ghost {
-  font-size: 14px;
-  padding: 8px 18px;
-  border-radius: 999px;
-  border: none;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-.btn-primary {
-  background: linear-gradient(135deg, #c2882f, #a86922);
-  color: #fffdf6;
-  box-shadow: 0 10px 26px rgba(149, 90, 31, 0.48);
-}
-
-.btn-primary:hover {
-  filter: brightness(1.03);
-}
-
-.btn-ghost {
-  background: #fdfaf4;
-  color: #5f4b2b;
-  border: 1px solid #e0cfaa;
-}
-
-.btn-ghost:hover {
-  background: #f8f0dd;
-}
-
-/* Middle column – Areas / Work */
-.col-block {
-  background: #fdfaf4;
-  border-radius: 20px;
-  border: 1px solid #ead9b9;
-  padding: 16px 18px;
-}
-
-.col-block-title {
+.contact a {
+  color: #0054a6;
   font-size: 15px;
-  font-weight: 600;
-  margin-bottom: 8px;
-  color: #7c5a26;
-}
-
-.col-block-list {
-  list-style: none;
-  font-size: 13px;
-  color: #4b5563;
-}
-
-.col-block-list li + li {
-  margin-top: 4px;
-}
-
-/* Right column – Contact */
-.contact-list {
-  list-style: none;
-  font-size: 13px;
-  color: #374151;
-}
-
-.contact-list li + li {
-  margin-top: 4px;
-}
-
-.contact-list a {
-  color: #1d4ed8;
   text-decoration: none;
 }
 
-.contact-list a:hover {
+.contact a:hover {
   text-decoration: underline;
 }
 
-/* ========= Khutbah link highlight ========= */
-.highlight-card {
-  margin-top: 16px;
-  background: #fef7ea;
-  border-radius: 16px;
-  border: 1px dashed #e2c89a;
-  padding: 10px 12px;
-  font-size: 13px;
-  color: #5f4b2b;
+/* ============================
+   Bullets
+   ============================ */
+ul {
+  padding: 0;
+  list-style: none;
 }
 
-/* ========= FOOTER ========= */
-.footer {
-  margin-top: 10px;
-  padding-top: 14px;
-  border-top: 1px solid #e5dfcf;
+ul li::before {
+  content: "• ";
+  color: var(--accent);
+}
+
+/* ============================
+   Buttons
+   ============================ */
+.btn-row {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 8px;
-  font-size: 12px;
-  color: #9ca3af;
+  gap: 14px;
+  margin-top: 24px;
 }
 
-/* ========= RESPONSIVE ========= */
-@media (max-width: 992px) {
-  .page {
-    margin: 18px;
-    padding: 22px 18px 24px;
-  }
-
-  .main-layout {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 18px;
-  }
-
-  .nav-bar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+.btn {
+  background: var(--accent);
+  color: white;
+  padding: 12px 22px;
+  border-radius: 20px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.2s;
 }
 
-@media (max-width: 640px) {
-  .top-bar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+.btn:hover {
+  background: var(--accent-hover);
+}
 
-  [dir="rtl"] .top-bar {
-    align-items: flex-end;
-  }
-
-  .button-row {
-    flex-direction: column;
-  }
-
-  .btn-primary,
-  .btn-ghost {
-    width: 100%;
-  }
-
-  .footer {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+/* ============================
+   Responsive
+   ============================ */
+@media(max-width: 820px) {
+  .profile { flex-direction: column; }
+  .profile-left { width: 100%; }
 }
