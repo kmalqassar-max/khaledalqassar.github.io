@@ -169,3 +169,22 @@ ul li::before {
   .profile { flex-direction: column; }
   .profile-left { width: 100%; }
 }
+.footer-lang .lang-switch {
+  display: inline-flex;
+  gap: 10px;
+}
+
+.footer-lang button {
+  padding: 6px 20px;
+  border-radius: 18px;
+  border: 1px solid var(--card-border);
+  background: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.footer-lang button.active {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
