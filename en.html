@@ -1,350 +1,103 @@
+
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Khaled Alqassar | Imam & Mosque Speaker</title>
-
-  <!-- Google Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet" />
-
-  <link rel="stylesheet" href="style-en.css" />
+  <title>Khaled Alqassar | Imam & Mosque Preacher</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="page">
-    <!-- TOPBAR -->
-    <div class="topbar">
-      <div class="topbar-left">
-        <div class="logo-circle">K</div>
-        <div class="topbar-title-group">
-          <div class="site-title">Khaled Alqassar</div>
-          <div class="site-subtitle">Official website for sermons, lessons & community programs</div>
-        </div>
-      </div>
-      <div class="topbar-right">
-        <div class="topbar-date">
-          <!-- ใส่เองได้ตามต้องการ -->
-          Imam & Mosque Speaker
-        </div>
-        <div class="topbar-divider"></div>
-        <div class="lang-switch">
-          <button class="lang-btn" type="button" onclick="location.href='index.html'">العربية</button>
-          <button class="lang-btn active" type="button">English</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- HEADER & NAV -->
-    <header class="header">
-      <div class="header-top-row">
-        <div>
-          <div style="font-size: 14px; font-weight: 700; margin-bottom: 3px;">
-            In the name of Allah, the Most Merciful, the Bestower of Mercy
-          </div>
-          <div style="font-size: 12px; color: var(--text-muted);">
-            Welcome to the official platform of Sheikh Khaled Alqassar: Friday sermons, lessons, youth programs, and community guidance.
-          </div>
-        </div>
-        <div class="header-top-right">
-          <span>Browse topics</span>
-          <span>Khutbah • Lessons • Youth • Family • Heart-softeners • Articles</span>
-        </div>
-      </div>
-
-      <nav class="main-nav">
-        <button class="nav-pill active" type="button" onclick="location.href='#home'">Home</button>
-        <button class="nav-pill" type="button" onclick="location.href='#khutbah'">Khutbah</button>
-        <button class="nav-pill" type="button" onclick="location.href='#videos'">Videos</button>
-        <button class="nav-pill" type="button" onclick="location.href='#projects'">Projects</button>
-        <button class="nav-pill" type="button" onclick="location.href='#books'">Books / Articles</button>
-        <button class="nav-pill" type="button" onclick="location.href='#about'">About Sheikh</button>
-        <button class="nav-pill" type="button" onclick="location.href='#contact'">Contact</button>
-      </nav>
-    </header>
-
-    <!-- MAIN LAYOUT -->
-    <main class="layout" id="home">
-      <!-- MAIN CONTENT -->
-      <section>
-        <!-- HERO: profile + scholarly card -->
-        <article class="card">
-          <div class="hero-row">
-            <!-- Left: Profile -->
-            <div>
-              <div class="hero-left-title">
-                Imam, Mosque Speaker & Islamic Educator
-              </div>
-              <div class="hero-left-sub">
-                Serving the community with Friday sermons, lessons, and youth programs.
-              </div>
-
-              <div class="chip-row">
-                <span class="chip">10+ years of experience</span>
-                <span class="chip">Mosque leadership</span>
-                <span class="chip">Community & youth programs</span>
-              </div>
-
-              <p class="hero-text">
-                Sheikh Khaled Alqassar delivers clear and balanced Islamic guidance through Friday khutbahs,
-                weekly lessons, and community initiatives – focusing on connecting revelation to real life for
-                families, youth, and the wider community.
-              </p>
-
-              <div class="btn-row">
-                <a href="#khutbah" class="btn primary">View Friday Khutbah</a>
-                <a href="#videos" class="btn ghost">Watch videos</a>
-              </div>
-            </div>
-
-            <!-- Right: mini scholarly card -->
-            <div class="card" style="padding: 12px 12px 10px;">
-              <div class="hero-mini-card-title">Featured reflection</div>
-              <p class="hero-mini-card-text">
-                “The Imam is not only a voice on the minbar, but a heart among his people – listening to their concerns,
-                guiding them with mercy, and reminding them of Allah in every season of life.”
-              </p>
-              <p class="hero-mini-card-text" style="margin-top: 8px;">
-                This platform brings together khutbahs, lessons, and programs for those seeking clarity and spiritual growth.
-              </p>
-            </div>
-          </div>
-
-          <!-- Small scholarly “today’s highlight” -->
-          <div style="margin-top: 10px; font-size: 12px; color: var(--text-muted);">
-            Highlight: Selected khutbahs and video series are organized below – along with projects and articles in progress.
-          </div>
-        </article>
-
-        <!-- LATEST OVERVIEW: Khutbah / Videos / Articles -->
-        <div class="section-title-row">
-          <div class="section-title">Overview</div>
-        </div>
-
-        <div class="grid-3">
-          <div class="item-card" onclick="location.href='#khutbah'">
-            <div class="item-title">Friday Khutbah</div>
-            <div class="item-meta">
-              Selection of khutbahs with full YouTube recordings and topics focused on faith, family, and character.
-            </div>
-          </div>
-
-          <div class="item-card" onclick="location.href='#videos'">
-            <div class="item-title">Video series & lessons</div>
-            <div class="item-meta">
-              Categorized by themes: tafsir-style reflections, reminders, and short clips for everyday life.
-            </div>
-          </div>
-
-          <div class="item-card" onclick="location.href='#projects'">
-            <div class="item-title">Projects & community work</div>
-            <div class="item-meta">
-              Youth programs, family sessions, and mosque-based initiatives can be highlighted here.
-            </div>
+    <main class="card">
+      <header class="card-header">
+        <div class="avatar-block">
+          <div class="avatar"></div>
+          <div>
+            <div class="name-main">Khaled Alqassar</div>
+            <div class="name-sub">Imam &amp; Mosque Preacher</div>
           </div>
         </div>
 
-        <!-- KHUTBAH SECTION -->
-        <section id="khutbah" class="section-block">
-          <div class="section-title-row">
-            <div class="section-title">Selected Friday Khutbah</div>
-          </div>
+        <nav class="lang-switch">
+          <a href="index.html" class="lang-pill">العربية</a>
+          <a href="en.html" class="lang-pill active">English</a>
+        </nav>
+      </header>
 
-          <div class="grid-3">
-            <div class="item-card">
-              <div class="item-title">
-                Khutbah: The importance of sincere repentance
-              </div>
-              <div class="item-meta">
-                Example link to a khutbah video – replace with actual URL:
-                <br />
-                <a href="https://youtu.be/hOVH-O-P9sk" target="_blank">
-                  Watch on YouTube
-                </a>
-              </div>
-            </div>
-
-            <div class="item-card">
-              <div class="item-title">
-                Khutbah: Mercy in the life of the believer
-              </div>
-              <div class="item-meta">
-                <a href="https://youtu.be/bM78sdJRmz8" target="_blank">
-                  Watch on YouTube
-                </a>
-              </div>
-            </div>
-
-            <div class="item-card">
-              <div class="item-title">
-                Khutbah: Holding fast to the Qur'an
-              </div>
-              <div class="item-meta">
-                <a href="https://youtu.be/H2Pn1N2Jnew" target="_blank">
-                  Watch on YouTube
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <p style="font-size: 12px; color: var(--text-muted); margin-top: 8px;">
-            More khutbah videos can be added here in the same format. Each card can represent one Friday khutbah with a direct YouTube link.
+      <section class="card-body">
+        <div class="col">
+          <h1 class="hero-title">
+            Imam, Mosque Speaker, Islamic Educator
+          </h1>
+          <p class="hero-subtitle">
+            Helping communities grow in faith with wisdom and compassion.
           </p>
-        </section>
 
-        <!-- VIDEOS SECTION -->
-        <section id="videos" class="section-block">
-          <div class="section-title-row">
-            <div class="section-title">Video Library</div>
+          <div class="chip-row">
+            <span class="chip">10+ years of experience</span>
+            <span class="chip">Mosque leadership</span>
+            <span class="chip">Community support</span>
           </div>
 
-          <div class="card">
-            <div class="video-group">
-              <div class="video-group-title">Friday Khutbah (Video)</div>
-              <ul class="video-list">
-                <li><a href="https://youtu.be/hOVH-O-P9sk" target="_blank">Khutbah – topic 1</a></li>
-                <li><a href="https://youtu.be/bM78sdJRmz8" target="_blank">Khutbah – topic 2</a></li>
-                <li><a href="https://youtu.be/H2Pn1N2Jnew" target="_blank">Khutbah – topic 3</a></li>
-                <!-- เพิ่มลิงก์อื่นๆ ได้ใน pattern เดียวกัน -->
-              </ul>
-            </div>
+          <p class="hero-text">
+            With over 10 years of experience in Islamic guidance, mosque
+            leadership, community support, and religious education. Helping
+            individuals and communities grow spiritually with clarity, wisdom,
+            and compassion.
+          </p>
 
-            <div class="video-group">
-              <div class="video-group-title">Lectures & lessons</div>
-              <ul class="video-list">
-                <li><a href="https://youtu.be/qLj9ovxCg_Y" target="_blank">Lecture – example 1</a></li>
-                <li><a href="https://youtu.be/j9D1tHDd8d0" target="_blank">Lecture – example 2</a></li>
-              </ul>
-            </div>
-
-            <div class="video-group">
-              <div class="video-group-title">Short reminders & clips</div>
-              <ul class="video-list">
-                <li><a href="https://youtu.be/iOYkV0k4j-o" target="_blank">Short reminder 1</a></li>
-                <li><a href="https://youtu.be/YtdgS9h1vjQ" target="_blank">Short reminder 2</a></li>
-              </ul>
-            </div>
+          <div class="btn-row">
+            <a
+              href="mailto:contact@khaledalqassar.com?subject=Booking%20consultation"
+              class="btn primary"
+              >Book Consultation</a
+            >
+            <a href="khutbah-en.html" class="btn ghost">Friday Khutbah</a>
           </div>
-        </section>
+        </div>
 
-        <!-- PROJECTS SECTION -->
-        <section id="projects" class="section-block">
-          <div class="section-title-row">
-            <div class="section-title">Projects & Programs</div>
-          </div>
+        <div class="col">
+          <h2 class="section-title">Areas of Expertise</h2>
+          <ul class="bullet-list">
+            <li>Mosque Leadership &amp; Management</li>
+            <li>Friday Sermons &amp; Public Speaking</li>
+            <li>Islamic Teaching &amp; Education</li>
+            <li>Community Support &amp; Counseling</li>
+          </ul>
+        </div>
 
-          <div class="grid-3">
-            <div class="item-card">
-              <div class="item-title">Youth programs</div>
-              <div class="item-meta">
-                Regular sessions tailored for young Muslims, focusing on identity, faith, and character.
-              </div>
-            </div>
-            <div class="item-card">
-              <div class="item-title">Family sessions</div>
-              <div class="item-meta">
-                Guidance for families, couples, and parents facing modern challenges.
-              </div>
-            </div>
-            <div class="item-card">
-              <div class="item-title">Mosque initiatives</div>
-              <div class="item-meta">
-                Community-building projects and collaborations with local mosques.
-              </div>
-            </div>
-          </div>
-        </section>
+        <div class="col">
+          <h2 class="section-title">Contact</h2>
+          <p class="section-text">
+            For booking sermons, mosque programs, community sessions or Islamic
+            guidance, feel free to reach out.
+          </p>
 
-        <!-- BOOKS / ARTICLES SECTION -->
-        <section id="books" class="section-block">
-          <div class="section-title-row">
-            <div class="section-title">Books & Articles</div>
-          </div>
-
-          <div class="card">
-            <p style="font-size: 13px; color: var(--text-muted);">
-              This section can include links to PDF booklets, written articles, and summaries of khutbahs or lessons.
-              Each item can be added as a card or list entry with a short description and download/view link.
-            </p>
-          </div>
-        </section>
-
-        <!-- ABOUT SHEIKH -->
-        <section id="about" class="section-block">
-          <div class="section-title-row">
-            <div class="section-title">About Sheikh Khaled Alqassar</div>
-          </div>
-
-          <div class="card">
-            <p class="hero-text">
-              Sheikh Khaled Alqassar is an imam and mosque speaker with more than a decade of experience in delivering khutbahs,
-              teaching, and community engagement. His work focuses on:
-            </p>
-            <ul style="font-size: 13px; color: var(--text-muted); padding-left: 18px;">
-              <li>Balancing knowledge with wisdom and mercy in da‘wah</li>
-              <li>Addressing practical issues faced by families and youth</li>
-              <li>Connecting the Qur'an and Sunnah to modern challenges</li>
-            </ul>
-          </div>
-        </section>
-
-        <!-- CONTACT -->
-        <section id="contact" class="section-block">
-          <div class="section-title-row">
-            <div class="section-title">Contact</div>
-          </div>
-
-          <div class="card">
-            <p class="hero-text">
-              For khutbah invitations, mosque programs, youth sessions, family talks, or media collaboration:
-            </p>
-            <p class="hero-text">
-              <strong>Email:</strong>
-              <a href="mailto:contact@khaledalqassar.uk">contact@khaledalqassar.uk</a>
-              <br />
-              <strong>Instagram:</strong>
-              <a href="https://instagram.com/khaledalqassar" target="_blank">@khaledalqassar</a>
-              <br />
-              <strong>YouTube:</strong> Khaled AlQassar
-            </p>
-          </div>
-        </section>
+          <p class="section-text">
+            <strong>Email</strong><br />
+            <a href="mailto:contact@khaledalqassar.uk"
+              >contact@khaledalqassar.uk</a
+            >
+          </p>
+          <p class="section-text">
+            <strong>Instagram</strong><br />
+            <a href="https://instagram.com/khaledalqassar" target="_blank"
+              >@khaledalqassar</a
+            >
+          </p>
+          <p class="section-text">
+            <strong>YouTube</strong><br />
+            Khaled AlQassar
+          </p>
+        </div>
       </section>
 
-      <!-- SIDEBAR -->
-      <aside>
-        <section class="sidebar-card">
-          <div class="widget-title">For attendees & organizers</div>
-          <p class="sidebar-small-text">
-            This website helps mosque committees and organizers quickly review Sheikh Khaled’s work:
-            khutbah topics, lecture style, and ongoing projects – all in one place.
-          </p>
-        </section>
-
-        <section class="card">
-          <div class="widget-title">Quick links</div>
-          <ul class="video-list">
-            <li><a href="#khutbah">Friday Khutbah</a></li>
-            <li><a href="#videos">Video Library</a></li>
-            <li><a href="#projects">Projects & Programs</a></li>
-            <li><a href="#contact">Contact & booking</a></li>
-          </ul>
-        </section>
-      </aside>
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-      <div class="footer-top">
+      <footer class="card-footer">
         <span>© 2025 Khaled Alqassar</span>
-        <span>•</span>
         <span>Imam · Mosque Speaker · Islamic Educator</span>
-      </div>
-      <div class="footer-bottom">
-        Website maintained with care for mosques, families, and youth.
-      </div>
-    </footer>
+      </footer>
+    </main>
   </div>
 </body>
 </html>
