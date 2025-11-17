@@ -1,181 +1,67 @@
-/* ============================
-   Global Theme — Beige + White
-   ============================ */
-
+/* ======= Global Theme ======= */
 :root {
-  --bg-top: #f7f3ee;       /* น้ำตาลอ่อนครีมด้านบน */
-  --bg-bottom: #f2eee9;    /* ครีมเข้มนิดๆ */
-  --card-bg: #ffffff;      /* การ์ดขาว */
-  --card-border: #e5e0da;  /* ขอบสีเบจ */
-  --accent: #b6895b;       /* น้ำตาลทองหรูๆ */
-  --accent-hover: #a3784d;
-  --text-main: #2b2b2b;
-  --text-muted: #6b6b6b;
-  --radius: 28px;
+  --bg: #f4eee7;
+  --card-bg: #ffffff;
+  --card-border: #e5d8c8;
+  --text-main: #333;
+  --text-light: #666;
+  --accent: #8b6f47; /* เบจเข้มทองๆ */
+  --accent-light: #c9b59a;
+  --radius: 22px;
 }
 
-/* RESET */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
 body {
-  font-family: "Tajawal", system-ui, sans-serif;
-  background: linear-gradient(to bottom, var(--bg-top), var(--bg-bottom));
+  margin: 0;
+  font-family: "Tahoma", sans-serif;
+  background: var(--bg);
+  direction: rtl;
+}
+
+.page {
+  max-width: 1100px;
+  margin: 50px auto;
+  background: var(--card-bg);
+  padding: 40px;
+  border-radius: var(--radius);
+  border: 1px solid var(--card-border);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+}
+
+/* ======= Headers ======= */
+h1 {
+  margin-top: 0;
+  font-size: 32px;
   color: var(--text-main);
-  padding: 30px 16px;
+}
+
+h2 {
+  color: var(--accent);
+  font-size: 26px;
+}
+
+p {
+  color: var(--text-light);
   line-height: 1.8;
 }
 
-/* RTL support */
-[dir="rtl"] body { direction: rtl; text-align: right; }
-[dir="ltr"] body { direction: ltr; text-align: left; }
-
-/* ============================
-   MAIN CARD
-   ============================ */
-.page {
-  max-width: 1150px;
-  margin: auto;
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: var(--radius);
-  padding: 38px 42px 48px;
-  box-shadow:
-    0 20px 55px rgba(0,0,0,0.08),
-    0 0 0 1px var(--card-border);
-}
-
-/* ============================
-   Layout
-   ============================ */
-.header-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.lang-switch {
-  display: flex;
-  gap: 8px;
-}
-
-.lang-switch button {
-  padding: 6px 14px;
-  border-radius: 16px;
-  border: 1px solid #ddd;
-  background: #fff;
-  cursor: pointer;
-  font-size: 14px;
-}
-
-.lang-switch button.active {
-  background: var(--accent);
-  color: white;
-  border-color: var(--accent);
-}
-
-/* ============================
-   Profile
-   ============================ */
-.profile {
-  display: flex;
-  gap: 32px;
-  margin-top: 28px;
-}
-
-.profile-left {
-  width: 34%;
-}
-
-.avatar {
-  width: 86px;
-  height: 86px;
-  border-radius: 22px;
-  background: linear-gradient(145deg, #e5d4c1, #bfa891);
-  margin-bottom: 16px;
-}
-
-.name {
-  font-size: 26px;
-  font-weight: 700;
-  margin-bottom: 2px;
-}
-
-.title {
-  font-size: 16px;
-  color: var(--text-muted);
-}
-
-/* ============================
-   Contact
-   ============================ */
-.section-title {
-  margin: 22px 0 10px;
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--accent);
-}
-
-.contact a {
-  color: #0054a6;
-  font-size: 15px;
-  text-decoration: none;
-}
-
-.contact a:hover {
-  text-decoration: underline;
-}
-
-/* ============================
-   Bullets
-   ============================ */
+/* ======= Lists ======= */
 ul {
-  padding: 0;
-  list-style: none;
+  padding-right: 20px;
 }
 
-ul li::before {
-  content: "• ";
-  color: var(--accent);
+/* ======= Language Switch (footer) ======= */
+.footer-lang {
+  text-align: center;
+  margin-top: 45px;
 }
 
-/* ============================
-   Buttons
-   ============================ */
-.btn-row {
-  display: flex;
-  gap: 14px;
-  margin-top: 24px;
-}
-
-.btn {
-  background: var(--accent);
-  color: white;
-  padding: 12px 22px;
-  border-radius: 20px;
-  font-size: 15px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: 0.2s;
-}
-
-.btn:hover {
-  background: var(--accent-hover);
-}
-
-/* ============================
-   Responsive
-   ============================ */
-@media(max-width: 820px) {
-  .profile { flex-direction: column; }
-  .profile-left { width: 100%; }
-}
 .footer-lang .lang-switch {
   display: inline-flex;
   gap: 10px;
 }
 
 .footer-lang button {
-  padding: 6px 20px;
+  padding: 6px 18px;
   border-radius: 18px;
   border: 1px solid var(--card-border);
   background: white;
@@ -187,4 +73,19 @@ ul li::before {
   background: var(--accent);
   color: white;
   border-color: var(--accent);
+}
+
+/* ===== Buttons ===== */
+.btn-primary {
+  background: var(--accent);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 18px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-primary:hover {
+  background: var(--accent-light);
 }
