@@ -1,266 +1,119 @@
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <title>الشيخ خالد القصّار | إمام وخطيب مسجد</title>
+  <title>خالد القصّار | إمام وخطيب مسجد</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="page">
-    <!-- TOPBAR -->
-    <div class="topbar">
-      <div class="topbar-left">
-        <div class="logo-circle">خ</div>
-        <div class="topbar-title-group">
-          <div class="site-title">الشيخ خالد القصّار</div>
-          <div class="site-subtitle">المنصّة الرسمية للخطب والدروس والبرامج المجتمعية</div>
-        </div>
-      </div>
-      <div class="topbar-right">
-        <div class="topbar-date">
-          منصة علمية ودعوية • الكويت
-        </div>
-      </div>
-    </div>
-
-    <!-- HEADER & NAV -->
-    <header class="header">
-      <div class="header-top-row">
-        <div>
-          <div style="font-size:14px;font-weight:700;margin-bottom:3px;">
-            بسم الله الرحمن الرحيم
-          </div>
-          <div style="font-size:12px;color:var(--text-muted);">
-            مرحبًا بكم في الموقع الرسمي للشيخ خالد القصّار للاطلاع على الخطب، الدروس، البرامج الشبابية، والمحتوى الدعوي.
+    <main class="card">
+      
+      <!-- رأس الصفحة: صورة + اسم + لغة -->
+      <header class="card-header">
+        <div class="avatar-block">
+          <div class="avatar"></div>
+          <div>
+            <div class="name-main">خالد القصّار</div>
+            <div class="name-sub">إمام وخطيب مسجد</div>
           </div>
         </div>
-        <div class="header-top-right">
-          <span>تصفّح المحتوى حسب التصنيف</span>
-          <span>خطب الجمعة • دروس علمية • برامج شبابية • مقالات وتنبيهات إيمانية</span>
-        </div>
-      </div>
 
-      <nav class="main-nav">
-        <a class="nav-pill active" href="#home">الرئيسية</a>
-        <a class="nav-pill" href="khutbah-ar.html">الخطب</a>
-        <a class="nav-pill" href="#videos">المقاطع المرئية</a>
-        <a class="nav-pill" href="#projects">البرامج والمشاريع</a>
-        <a class="nav-pill" href="#books">الكتب والمقالات</a>
-        <a class="nav-pill" href="#about">عن الشيخ</a>
-        <a class="nav-pill" href="#contact">التواصل</a>
-      </nav>
-    </header>
+        <!-- أزرار اللغات -->
+        <nav class="lang-switch">
+          <a href="index.html" class="lang-pill active">العربية</a>
+          <a href="en.html" class="lang-pill">English</a>
+        </nav>
+      </header>
 
-    <!-- MAIN LAYOUT -->
-    <main class="layout" id="home">
-      <!-- MAIN CONTENT -->
-      <section>
-        <!-- HERO CARD -->
-        <article class="card">
-          <div class="hero-row">
-            <!-- يسار: تعريف عام -->
-            <div>
-              <h1 class="hero-left-title">
-                إمام وخطيب مسجد، معلّم شرعي يخدم المجتمع بالحكمة والرحمة
-              </h1>
-              <p class="hero-left-sub">
-                أكثر من عشر سنوات في الإمامة والخطابة والتعليم الشرعي وخدمة الشباب والأُسر.
-              </p>
+      <!-- المحتوى الرئيسي -->
+      <section class="card-body">
+        
+        <!-- العمود الأول: التعريف -->
+        <div class="col profile">
+          <h1 class="hero-title">
+            إمام وخطيب مسجد، معلّم شرعي
+          </h1>
 
-              <div class="chip-row">
-                <span class="chip">خبرة 10+ سنوات</span>
-                <span class="chip">قيادة المساجد</span>
-                <span class="chip">برامج شبابية وأسرية</span>
-              </div>
-
-              <p class="hero-text">
-                يقدّم الشيخ خالد القصّار خطب الجمعة، الدروس الأسبوعية، والبرامج المجتمعية التي
-                تربط الوحي بحياة الناس اليومية، مع عناية خاصة بالشباب والأسرة، وبخطاب متوازن
-                يجمع بين وضوح المنهج وحكمة الكلمة.
-              </p>
-
-              <div class="btn-row">
-                <a href="khutbah-ar.html" class="btn primary">
-                  عرض خطب الجمعة
-                </a>
-                <a href="#videos" class="btn ghost">
-                  مشاهدة المقاطع المرئية
-                </a>
-              </div>
-            </div>
-
-            <!-- يمين: بطاقة صغيرة -->
-            <div class="card">
-              <div class="hero-mini-card-title">محاور العمل الدعوي</div>
-              <p class="hero-mini-card-text">
-                • خطب الجمعة الموضوعية المرتبطة بواقع الناس<br />
-                • دروس في العقيدة، التفسير، والرقائق الإيمانية<br />
-                • برامج شبابية وأنشطة للمسجد والمجتمع المحلي
-              </p>
-            </div>
-          </div>
-        </article>
-
-        <!-- SECTION: أبرز الخطب / لمحة -->
-        <section class="card section-block" id="khutbah-highlight">
-          <div class="section-title-row">
-            <div class="section-title">لمحة من خطب الجمعة</div>
-          </div>
-          <div class="grid-3">
-            <div class="item-card">
-              <div class="item-title">التوبة الصادقة وأثرها على القلب</div>
-              <div class="item-meta">خُطبة تذكّر بأبواب الرجوع إلى الله في زمن الفتن.</div>
-            </div>
-            <div class="item-card">
-              <div class="item-title">ثبات الأسرة في زمن المتغيرات</div>
-              <div class="item-meta">وصايا للإباء والأمّهات في تربية الأبناء على الإيمان والخلق.</div>
-            </div>
-            <div class="item-card">
-              <div class="item-title">الشباب بين طموح الدنيا ومسؤولية الآخرة</div>
-              <div class="item-meta">رسائل عملية للشباب في رسم طريق متوازن في الحياة.</div>
-            </div>
-          </div>
-          <div style="margin-top:10px;font-size:12px;">
-            للاطلاع على المزيد من الخطب:
-            <a href="khutbah-ar.html" style="color:#1d4ed8;">انتقال إلى صفحة الخطب ↗</a>
-          </div>
-        </section>
-
-        <!-- SECTION: VIDEOS -->
-        <section class="card section-block" id="videos">
-          <div class="section-title-row">
-            <div class="section-title">المقاطع المرئية (YouTube)</div>
-          </div>
-
-          <div class="video-group-title">خطب الجمعة</div>
-          <ul class="video-list">
-            <li><a href="https://youtu.be/KZCtgRN4KNw" target="_blank">خُطبة: التوبة الصادقة</a></li>
-            <li><a href="https://youtu.be/gIO4Y5dwpfk" target="_blank">خُطبة: الثبات على الطاعة</a></li>
-          </ul>
-
-          <div class="video-group-title">محاضرات ودروس عامة</div>
-          <ul class="video-list">
-            <li><a href="https://youtu.be/VEyeTHiax-I" target="_blank">محاضرة: معاني التوكل على الله</a></li>
-            <li><a href="https://youtu.be/sFzEiO_FcYI" target="_blank">درس: التعامل مع الابتلاء</a></li>
-          </ul>
-
-          <div style="margin-top:10px;font-size:12px;">
-            المزيد من المقاطع متوفرة على قناة الشيخ في YouTube.
-          </div>
-        </section>
-
-        <!-- SECTION: PROJECTS -->
-        <section class="card section-block" id="projects">
-          <div class="section-title-row">
-            <div class="section-title">البرامج والمشاريع</div>
-          </div>
-          <div class="grid-3">
-            <div class="item-card">
-              <div class="item-title">برنامج شباب المسجد</div>
-              <div class="item-meta">لقاءات أسبوعية تجمع بين الترفيه المباح والتربية الإيمانية.</div>
-            </div>
-            <div class="item-card">
-              <div class="item-title">مجالس الأسرة القرآنية</div>
-              <div class="item-meta">جلسات للأُسر لتعلّم تدبر قصار السور والعمل بها.</div>
-            </div>
-            <div class="item-card">
-              <div class="item-title">دروس ثابتة بعد الصلوات</div>
-              <div class="item-meta">شرح مختصر لكتب في العقيدة والحديث والرقائق.</div>
-            </div>
-          </div>
-        </section>
-
-        <!-- SECTION: BOOKS & ARTICLES -->
-        <section class="card section-block" id="books">
-          <div class="section-title-row">
-            <div class="section-title">مواد مكتوبة وملخّصات</div>
-          </div>
-          <p style="font-size:13px;color:var(--text-muted);margin-bottom:8px;">
-            يتم إضافة ملخّصات للخطب والدروس ومقالات إيمانية مختصرة بشكل دوري، ويمكن الاستفادة منها في
-            حلقات المسجد أو مجموعات التذكير.
+          <p class="hero-subtitle">
+            يخدم المجتمع بالكلمة الحكيمة والرحمة.
           </p>
-          <div class="grid-3">
-            <div class="item-card">
-              <div class="item-title">نقاط مختصرة من خطب التوبة والرجوع</div>
-              <div class="item-meta">ملخّص يساعد في إعادة عرض الموضوع في حلقة صغيرة.</div>
-            </div>
-            <div class="item-card">
-              <div class="item-title">وصايا للشباب في زمن الفتن الرقمية</div>
-              <div class="item-meta">مقال قصير عن ضبط الوقت والبُعد عن مواطن الشبهات.</div>
-            </div>
-            <div class="item-card">
-              <div class="item-title">معالم البيت المسلم المتوازن</div>
-              <div class="item-meta">محاور عملية للأسرة في التربية والتواصل.</div>
-            </div>
-          </div>
-        </section>
 
-        <!-- SECTION: ABOUT -->
-        <section class="card section-block" id="about">
-          <div class="section-title-row">
-            <div class="section-title">عن الشيخ خالد القصّار</div>
+          <div class="chip-row">
+            <span class="chip">خبرة 10+ سنوات</span>
+            <span class="chip">قيادة المساجد</span>
+            <span class="chip">خدمة المجتمع</span>
           </div>
+
           <p class="hero-text">
-            إمام وخطيب مسجد، له خبرة تجاوزت عشر سنوات في الإمامة، الخطابة، التعليم الشرعي،
-            والبرامج الشبابية. يركّز في طرحه على ربط النصوص بحياة الناس اليومية، مع عناية
-            خاصة بالشباب والبيئة الأسرية، وخطاب متوازن يجمع بين الوضوح والحكمة.
+            يمتلك الشيخ خالد القصّار أكثر من عشر سنوات من الخبرة في الإمامة
+            والخطابة والتعليم الشرعي وخدمة المجتمع. يساعد الأفراد والعائلات
+            على النمو الروحي بوضوح وحكمة ورحمة.
           </p>
-        </section>
-      </section>
 
-      <!-- SIDEBAR -->
-      <aside>
-        <!-- بطاقة تواصل -->
-        <section class="sidebar-card" id="contact">
-          <div class="widget-title">التواصل والحجوزات</div>
-          <p class="sidebar-small-text">
-            للحجز لخطب الجمعة، البرامج الدعوية، اللقاءات الشبابية، أو التعاون الإعلامي:
+          <div class="btn-row">
+            <a
+              href="mailto:contact@khaledalqassar.uk?subject=طلب%20استشارة"
+              class="btn primary"
+            >
+              حجز استشارة
+            </a>
+
+            <a href="khutbah-ar.html" class="btn ghost">
+              خطب الجمعة
+            </a>
+          </div>
+        </div>
+
+        <!-- العمود الثاني: مجالات الخبرة -->
+        <div class="col">
+          <h2 class="section-title">مجالات الخبرة</h2>
+          <ul class="bullet-list">
+            <li>إدارة المساجد وقيادة المصلّين</li>
+            <li>خطب الجمعة والإلقاء الدعوي</li>
+            <li>التعليم الشرعي والدروس العلمية</li>
+            <li>الإرشاد الأسري وخدمة المجتمع</li>
+          </ul>
+        </div>
+
+        <!-- العمود الثالث: التواصل -->
+        <div class="col">
+          <h2 class="section-title">التواصل</h2>
+
+          <p class="section-text">
+            للحجز أو طلب البرامج الدعوية أو الجلسات المجتمعية أو الاستشارات الشرعية:
           </p>
-          <p class="sidebar-small-text">
-            <strong>البريد الإلكتروني:</strong><br />
-            <a href="mailto:contact@khaledalqassar.uk">contact@khaledalqassar.uk</a>
+
+          <p class="section-text">
+            <strong>البريد الإلكتروني</strong><br />
+            <a href="mailto:contact@khaledalqassar.uk">
+              contact@khaledalqassar.uk
+            </a>
           </p>
-          <p class="sidebar-small-text">
-            <strong>إنستغرام:</strong><br />
-            <a href="https://instagram.com/khaledalqassar" target="_blank">@khaledalqassar</a>
+
+          <p class="section-text">
+            <strong>إنستغرام</strong><br />
+            <a href="https://instagram.com/khaledalqassar" target="_blank">
+              @khaledalqassar
+            </a>
           </p>
-          <p class="sidebar-small-text">
-            <strong>YouTube:</strong><br />
+
+          <p class="section-text">
+            <strong>يوتيوب</strong><br />
             Khaled AlQassar
           </p>
-        </section>
-
-        <!-- بطاقة صغيرة إضافية -->
-        <section class="card">
-          <div class="widget-title">تنبيه</div>
-          <p class="sidebar-small-text">
-            يتم تحديث هذه الصفحة بشكل دوري، ويمكن إضافة روابط خاصة بالخطب أو الدروس الجديدة عند الحاجة.
-          </p>
-        </section>
-      </aside>
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-      <div class="footer-top">
-        <span>© ٢٠٢٥ الشيخ خالد القصّار</span>
-      </div>
-      <div class="footer-bottom">
-        <span>موقع شخصي دعوي • جميع الحقوق محفوظة</span><br />
-        <!-- سويتش اللغة في الأسفل -->
-        <div style="margin-top:6px;display:inline-flex;gap:6px;align-items:center;">
-          <span style="font-size:11px;">اللغة:</span>
-          <div class="lang-switch">
-            <a class="lang-btn active" href="index.html">العربية</a>
-            <a class="lang-btn" href="en.html">English</a>
-          </div>
         </div>
-      </div>
-    </footer>
+      </section>
+
+      <!-- الفوتر -->
+      <footer class="card-footer">
+        <span>© ٢٠٢٥ خالد القصّار</span>
+        <span>إمام · خطيب مسجد · معلّم شرعي</span>
+      </footer>
+
+    </main>
   </div>
 </body>
 </html>
